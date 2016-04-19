@@ -1,0 +1,293 @@
+.header{
+    position: relative;  
+    z-index: 3;          
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.search {
+    float: right;               
+    padding: 5px 0;
+}
+
+.search_box {
+    background-color: #FFFFFF;
+    padding: 0;  
+    height: 26px;
+    width: 100%;
+    border:1px solid #cbcbcb ;
+    display: block; 
+}
+
+.search_box input[type=text]{
+    border: none;
+    color: #000000;
+    font: 13px Arial !important; 
+    height: 26px;
+    width: 82.5%;
+    float: left;
+    margin-top: 1px;
+    padding: 0 12px;
+    background: 0 0;
+
+}
+
+/*Menu: opciones con listas desplegables*/
+.logo {
+    margin: 0;
+    position: absolute;   
+    z-index: 2;
+    top: 0;
+}
+
+.menu {
+    float: right;
+    -webkit-transition: all .3s ease; 
+    transition: all .3s ease;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+    position: relative;
+    display: inline-table;
+}
+
+.menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    min-width: 165px;
+    background-color: #7EA79A;
+    border: 0 solid #FFF;
+}
+.menu ul li {
+    padding: 0;
+    font-size: 15px;
+    font-family: pf_beausans_probbook;
+    text-transform: capitalize;
+    border: thin;
+}
+
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.menu ul ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+/*abriendo listas*/
+
+.menu>ul>li {
+    display: inline-block;
+    margin: 0 13px;
+    text-transform: uppercase;
+}
+
+.menu ul li>a {
+    padding: 19px 11px;
+}
+
+.menu ul ul>li {
+    position: relative;
+    text-transform: none;
+}
+
+.menu ul ul>li a {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    padding: 10px 15px 10px 10px;
+    height: auto;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    font-weight: 400!important;
+    width: 100%;
+}
+
+.menu ul ul>li:last-child a {
+    border-bottom: none;
+}
+
+.menu li:hover >ul{
+    display: block;
+}
+.menu ul li:hover{
+    background-color:#007ABD !important;
+}
+.main-menu {
+    background: #A3DECB;
+    padding-right: 10px;
+    height: 60px;
+}
+
+
+/*main*/
+
+.main{
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.items ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.items li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    margin-right: 0.8125%;
+    width: 17.5%;
+    text-align: center;
+}
+.items li, .noticias li #s6 h2 {
+    font-family: HelveticaNeueW01-75Bold;
+}
+
+.items li a {
+    color: #728485;
+    text-decoration: none;
+    display: inline-block;
+    padding: 25px 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+.items li:last-child {
+    font-size: 14px;
+    width: 25%;
+    margin-right: 0;
+    padding-right: 0;
+    text-align: left;
+}
+
+
+.footer{/*Pie de pagina*/
+    position: relative;
+    z-index: 2;
+}
+
+.footer .logofoot {/*Pie de pagina*/
+    float: left;
+}
+
+.footer .contacto {/*Pie de pagina*/
+    list-style: none;
+    float: left;
+    width: 96%;
+    margin: 10px 0;
+    border-bottom: 1px solid #4dc6cd;
+    padding: 5px 0;
+}
+
+.footer .contacto .info {/*Pie de pagina*/
+    display:inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer .contacto .info li {/*Pie de pagina*/
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.footer .contacto .terminos-condiciones {/*Pie de pagina*/
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .contacto .terminos-condiciones li {/*Pie de pagina*/
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    margin-right: 10px;
+}
+/* .content .clearfix{
+    background-color: skyblue;
+} */
+
+/*Clases creadadas por mi*/
+
+.PointImg{
+    -webkit-filter: sepia(0.5);
+}
+
+.despliegue {
+    font-size: 10px;
+    padding-left: 6px;
+}
+
+.withoutpadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+
+/* remove border between controls */
+.add-on .input-group-btn > .btn {
+    border-left-width: 0;
+    left:-2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* stop the glowing blue shadow */
+.add-on .form-control:focus {
+    -webkit-box-shadow: none; 
+            box-shadow: none;
+    border-color:#cccccc; 
+}
+
+.rango-fechas{
+    border-radius: 25px;
+    border: 5px solid #21AF82;
+    padding: 20px; 
+    height: 150px;    
+}
+
+.login-box{
+    background-image: url("images/login2.jpg") !important;
+    border-radius: 25px;
+    border: 5px solid #21AF82;
+    margin-top: 100px;
+    padding: 110px; 
+    height: 450px;    
+}
+.login-links{
+    color: #2A35CC !important;
+}
+
+.otibar{
+    /* background-color: #F7EFEF !important; */
+}

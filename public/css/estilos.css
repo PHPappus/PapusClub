@@ -1,0 +1,271 @@
+
+/*Dividiendo*/
+
+body{
+    background: white;
+}
+
+/*Cabecera*/
+
+.header{
+    margin-top: 0;
+    position: relative;  /*An element with position: relative; is positioned relative to its normal position.*/
+    z-index: 3;          /*The z-index property specifies the stack order of an element.*/ /*Greatest<--lowest*/
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.search {
+    float: right;   /*The float property specifies whether or not an element should float.*/
+                   /*The clear property is used to control the behavior of floating elements.*/
+    padding: 5px 0;
+}
+
+.search_box {
+    background: url(images/lines.png);
+    background-color: steelblue;
+    padding: 0;   /* Clears an area around the content. The padding is transparent*/ 
+    height: 26px;
+    width: 100%;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    display: block; /*display the element as a block*/
+}
+
+.search_box input[type=text]{
+    border: none;
+    color: white;
+    font: 400 13px/26px Arial !important; /*override*/
+    height: 26px;
+    width: 82.5%;
+    float: left;
+    margin-top: 1px;
+    padding: 0 12px;
+    background: 0 0;
+}
+
+/*Navegador listas desplegables*/
+.logo {
+    margin: 0;
+    position: absolute;   /* over everything*/
+    z-index: 2;
+    top: 0;
+}
+
+.menu {
+    float: right;
+    -webkit-transition: all .3s ease; 
+    transition: all .3s ease;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+    position: relative;
+    display: inline-table;
+}
+
+.menu ul li {
+    padding: 0;
+    font-size: 15px;
+    font-family: pf_beausans_probbook;
+    text-transform: capitalize;
+}
+
+.menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    min-width: 165px;
+    background-color: #7EA79A;
+    border: 0 solid #FFF;
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.menu ul ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+/*abriendo listas*/
+
+.menu>ul>li {
+    display: inline-block;
+    margin: 0 13px;
+    text-transform: uppercase;
+}
+
+.menu ul li>a {
+    padding: 19px 11px;
+}
+
+.menu ul ul>li {
+    position: relative;
+    text-transform: none;
+}
+
+.menu ul ul>li a {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    padding: 10px 15px 10px 10px;
+    height: auto;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    font-weight: 400!important;
+    width: 100%;
+}
+
+.menu ul ul>li:last-child a {
+    border-bottom: none;
+}
+
+.menu li:hover >ul{
+    display: block;
+}
+
+.mainmenu {
+    background: #A3DECB;
+    padding-right: 10px;
+    height: 60px;
+}
+
+/*Cuerpo*/
+
+.main{
+    position: relative;
+    z-index: 2;
+}
+
+.items ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.items li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    margin-right: 0.8125%;
+    width: 17.5%;
+    text-align: center;
+}
+.items li, .noticias li #s6 h2 {
+    font-family: HelveticaNeueW01-75Bold;
+}
+
+.items li a {
+    color: #728485;
+    text-decoration: none;
+    display: inline-block;
+    padding: 25px 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+.items li:last-child {
+    font-size: 14px;
+    width: 25%;
+    margin-right: 0;
+    padding-right: 0;
+    text-align: left;
+}
+
+/*Pie de pagina*/
+.footer{
+    position: relative;
+    z-index: 2;
+}
+
+.footer .logopie {
+    float: left;
+}
+
+.footer .contacto {
+    list-style: none;
+    float: left;
+    width: 96%;
+    margin: 10px 0;
+    border-bottom: 1px solid #4dc6cd;
+    padding: 5px 0;
+}
+
+.footer .contacto .info {
+    display:inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer .contacto .info li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.footer .contacto .terminos {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .contacto .terminos li {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    margin-right: 10px;
+}
+
+
+/*Generales*/
+
+
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+
+*:focus {
+    outline: none;
+}
+
+.flecha {
+    font-size: 9px;
+    padding-left: 6px;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+
