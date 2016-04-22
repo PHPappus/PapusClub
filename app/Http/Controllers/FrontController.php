@@ -62,5 +62,8 @@ class FrontController extends Controller
     public function registrar_postulante(){
         return view('registrar-postulante');
     }
+    public function modificar_postulante(){
+        return view('modificar-postulante');
+    }
 
 }
