@@ -35,4 +35,29 @@ class FrontController extends Controller
     public function reserva_bungalow_busqueda(){
     	return view('reserva-bungalow-busqueda');
     }
+    public function inicio_after_login(){
+        return view('inicio-after-login');
+    }
+    public function registrar_ambiente_al(){
+        return view('registrar-ambiente-al');
+    }
+    public function modificar_ambiente_al(){
+        return view('modificar-ambiente-al');
+    }
+    public function registrar_concesionaria_al(){
+        return view('registrar-concesionaria-al');
+    }
+    public function registrar_precio_pref_bungalows_al(){
+        return view('registrar-precio-pref-bungalows-al');
+    }
+    public function registrar_nuevo_producto_al(){
+        return view('registrar-nuevo-producto-al');
+    }
+    public function registrar_precio_especial_membresia_al(){
+        return view('registrar-precio-especial-membresia-al');
+    }
+    public function registrar_precio_pref_bungalows_1_al(){
+        return view('registrar-precio-pref-bungalows-1-al');
+    }
+
 }

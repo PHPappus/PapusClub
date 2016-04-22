@@ -57,11 +57,12 @@ body{
     margin: 0;
     position: absolute;   /* over everything*/
     z-index: 2;
-    top: 0;
+    top: 10px;
 }
 
 .menu {
     float: right;
+    margin-left: 90px;
     -webkit-transition: all .3s ease; 
     transition: all .3s ease;
 }

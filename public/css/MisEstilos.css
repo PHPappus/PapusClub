@@ -44,11 +44,15 @@
     margin: 0;
     position: absolute;   
     z-index: 2;
-    top: 0;
+    top: 10px;
+}
+#menu-2{
+    background-color: #8FD8D5;
 }
 
 .menu {
-    float: right;
+    float: left;
+    padding-left: 90px;
     -webkit-transition: all .3s ease; 
     transition: all .3s ease;
 }
@@ -62,6 +66,7 @@
 }
 
 .menu ul ul {
+    z-index: 1;
     display: none;
     position: absolute;
     top: 100%;
@@ -94,7 +99,7 @@
 
 .menu>ul>li {
     display: inline-block;
-    margin: 0 13px;
+    padding-right: 13px;
     text-transform: uppercase;
 }
 
@@ -130,12 +135,16 @@
 .menu ul li:hover{
     background-color:#007ABD !important;
 }
+.main-menu-alog {
+    background: #A3DECB;
+    padding-right: 10px;
+    height: 118px;
+}
 .main-menu {
     background: #A3DECB;
     padding-right: 10px;
-    height: 60px;
+    height: 72px;
 }
-
 
 /*main*/
 
@@ -290,4 +299,10 @@
 
 .otibar{
     /* background-color: #F7EFEF !important; */
+}
+
+.form-border{
+    border-style: dotted;
+    border-color: gray;
+    border-width: thin;
 }
