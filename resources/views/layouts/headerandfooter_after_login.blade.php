@@ -209,7 +209,7 @@
 								</li>
 								<li><a href="#" title="ir_postulante" target="_self">POSTULANTE<span class="despliegue">▼</span></a>
 									<ul>
-										<li><a href="#" title="ir_registrar_postulante" target="_self">REGISTRAR POSTULANTE</a></li>
+										<li><a href="registrar-postulante" title="ir_registrar_postulante" target="_self">REGISTRAR POSTULANTE</a></li>
 										<li><a href="#" title="ir_modificar_postulante" target="_self">MODIFICAR POSTULANTE</a></li>
 									</ul>						
 								</li>

@@ -59,5 +59,8 @@ class FrontController extends Controller
     public function registrar_precio_pref_bungalows_1_al(){
         return view('registrar-precio-pref-bungalows-1-al');
     }
+    public function registrar_postulante(){
+        return view('registrar-postulante');
+    }
 
 }
