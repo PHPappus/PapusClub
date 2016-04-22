@@ -17,6 +17,9 @@ class FrontController extends Controller
     public function futbol() {
     	return view('futbol');
     }
+    public function cultural(){
+        return view('cultural');    
+    }
     public function historia_papusclub() {
     	return view('historia-papusclub');
     }
