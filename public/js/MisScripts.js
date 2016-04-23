@@ -14,5 +14,13 @@ function hacerBusqueda(){
 	location.href="reserva-bungalow-busqueda#marca";
 }
 function openHistoriaPapusClub(){
-	location.href="historia-papusclub-ver-mas#marca"
+	location.href="historia-papusclub-ver-mas#marca";
+}
+
+function buscarambientes(){
+	location.href="anular-reserva-ambiente-b-al";
+}
+
+function ingresar_user(){
+	location.href="inicio-after-login";
 }

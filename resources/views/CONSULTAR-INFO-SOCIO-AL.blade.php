@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>REGISTRAR NUEVO PRODUCTO</title>
+	<title>CONSULTAR INFORMACIÓN DE SOCIO</title>
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,44 +22,46 @@
 		<br/><br/>
 		<div class="container">
 			<div class="col-sm-12 text-left lead">
-					<strong>REGISTRAR NUEVO PRODUCTO</strong>
+					<strong>INFORMACIÓN DE SOCIO</strong>
 			</div>		
 		</div>
 		<div class="container">
 			<form action="" class="form-horizontal form-border">
 				<br/><br/>
 				<div class="form-group">
-					<label for="" class="control-label col-sm-5">NOMBRE:</label>
+					<label for="" class="control-label col-sm-5">NOMBRES:</label>
 					<div class="col-sm-7">
 						<input type="text" class="form-control" id="nombre" placeholder="Nombre" style="max-width: 250px">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="" class="control-label col-sm-5">DESCRIPCIÓN:</label>
+					<label for="" class="control-label col-sm-5">APELLIDO PATERNO:</label>
 					<div class="col-sm-7">
-						<input type="text" class="form-control" id="descripcion" placeholder="Descripción" style="max-width: 250px">
+						<input type="text" class="form-control" id="ap-paterno" placeholder="Apellido Paterno" style="max-width: 250px">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="" class="control-label col-sm-5">STOCK:</label>
+					<label for="" class="control-label col-sm-5">APELLIDO MATERNO:</label>
 					<div class="col-sm-7">
-						<input type="text" class="form-control" id="stock" placeholder="Stock" style="max-width: 250px">
+						<input type="text" class="form-control" id="ap-materno" placeholder="Apellido Materno" style="max-width: 250px">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="SEDE" class="control-label col-sm-5">SEDE:</label>
+					<label for="" class="control-label col-sm-5">DNI:</label>
 					<div class="col-sm-7">
-						<select class="form-control" name="sede" style="max-width: 150px " >
-					                <option value="1" default>CALLAO</option>
-					                <option value="2">SURQUILLO</option>
-					                <option value="3">BARRANCO</option>
-					    </select>	
+						<input type="text" class="form-control" id="dni" placeholder="Dni" style="max-width: 250px">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="" class="control-label col-sm-5">TIPO DE PRODUCTO:</label>
+					<label for="" class="control-label col-sm-5">TELEFONO:</label>
 					<div class="col-sm-7">
-						<input type="text" class="form-control" id="tipo-producto" placeholder="Tipo de producto" style="max-width: 250px">
+						<input type="text" class="form-control" id="telefono" placeholder="Teléfono" style="max-width: 250px">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="control-label col-sm-5">CORREO ELECTRÓNICO:</label>
+					<div class="col-sm-7">
+						<input type="text" class="form-control" id="correo-electronico" placeholder="Correo electrónico" style="max-width: 250px">
 					</div>
 				</div>
 				
@@ -68,10 +70,10 @@
 				<br/>
 				<div class="form-group">
 					<div class="col-sm-6 text-center">
-						<button class="btn btn-primary" onclick="confirmar_registro_nuevo_producto()">CONFIRMAR</button>	
+						<button class="btn btn-primary" onclick="buscar_info_socio()">BUSCAR</button>	
 					</div>
 					<div class="col-sm-6 text-center">
-						<button class="btn btn-danger" onclick="cancelar_registro_nuevo_producto()">CANCELAR</button>	
+						<button class="btn btn-danger" onclick="regresar_consultar_info_socio()">REGRESAR</button>	
 					</div>
 				</div>
 			</form>

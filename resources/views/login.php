@@ -154,7 +154,7 @@
 					</div>
 				</div>		
 				<div class="form-group text-center">
-					<button class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-log-in"> </span> Ingresar</button>
+					<button class="btn btn-lg btn-primary" onclick="ingresar_user()"><span class="glyphicon glyphicon-log-in"> </span> Ingresar</button>
 				</div>	
 				<div class="container">
 					<div class="row">

@@ -61,7 +61,7 @@
 						<!-- Opción Actividades -->
 						<li><a href="#">ACTIVIDADES<span class="despliegue">▼</span></a>
 							<ul>
-								<li><a href="#" title="ir a cursos" target="_self">Cursos<span class="despliegue">▼</span></a>
+								<li><a href="#" title="ir a cursos" target="_self">TALLERES<span class="despliegue">▼</span></a>
 									<ul>
 										<li><a href="futbol" title="ir a futbol" target="_self">Futbol</a></li>
 										<li><a href="#" title="Actividad 1.2" target="_self">Actividad 1.2</a></li>

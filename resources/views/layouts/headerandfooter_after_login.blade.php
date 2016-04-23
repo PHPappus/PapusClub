@@ -145,6 +145,7 @@
 									<ul>
 										<li><a href="#" title="ir a ver curso" target="_self">VER</a></li>
 										<li><a href="#" title="ir a reservar ambiente" target="_self">RESERVAR</a></li>
+										<li><a href="anular-reserva-ambiente-al" title="ir a anular ambiente" target="_self">ANULAR</a></li>
 									</ul>						
 								</li>
 								<li><a href="#" title="ir a cursos" target="_self">CURSOS<span class="despliegue">▼</span></a>
@@ -201,10 +202,11 @@
 							<ul>
 								<li><a href="#" title="ir_socio" target="_self">SOCIO<span class="despliegue">▼</span></a>
 									<ul>
-										<li><a href="#" title="ir_registrar_nuevo_socio" target="_self">REGISTRAR NUEVO SOCIO
+										<li><a href="consultar-info-socio-al" title="ir a consultar socio" target="_self">CONSULTAR SOCIO</a></li>
+										<li><a href="#" title="ir a registrar nuevo socio" target="_self">REGISTRAR NUEVO SOCIO
 										</a></li>
-										<li><a href="#" title="ir_modificar_socio" target="_self">MODIFICAR SOCIO</a></li>
-										<li><a href="#" title="ir_registrar_multa" target="_self">REGISTRAR MULTA</a></li>
+										<li><a href="#" title="ir a modificar socio" target="_self">MODIFICAR SOCIO</a></li>
+										<li><a href="#" title="ir a registrar multa" target="_self">REGISTRAR MULTA</a></li>
 									</ul>
 								</li>
 								<li><a href="#" title="ir_postulante" target="_self">POSTULANTE<span class="despliegue">▼</span></a>

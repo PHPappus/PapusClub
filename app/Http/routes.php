@@ -14,11 +14,13 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-
-Route::get('nombre/{nombre}', function ($nombre) {
-    return "Hola mi nombre es: ".$nombre;
+Route::get('/', 'FrontController@index');
+Route::get('/{nombre}', function ($nombre) {
+     return view($nombre);
 });
 
+
+/*
 Route::get('/', 'FrontController@index');
 Route::get('login', 'FrontController@login');
 Route::get('futbol', 'FrontController@futbol');
@@ -36,3 +38,5 @@ Route::get('registrar-precio-pref-bungalows-al','FrontController@registrar_preci
 Route::get('registrar-nuevo-producto-al','FrontController@registrar_nuevo_producto_al');
 Route::get('registrar-precio-especial-membresia-al','FrontController@registrar_precio_especial_membresia_al');
 Route::get('registrar-precio-pref-bungalows-1-al','FrontController@registrar_precio_pref_bungalows_1_al');
+Route::get('registrar-precio-especial-membresia-1-al','FrontController@registrar_precio_especial_membresia_1_al');
+*/
