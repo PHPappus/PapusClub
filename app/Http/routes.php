@@ -22,6 +22,7 @@ Route::get('nombre/{nombre}', function ($nombre) {
 Route::get('/', 'FrontController@index');
 Route::get('login', 'FrontController@login');
 Route::get('futbol', 'FrontController@futbol');
+Route::get('cultural','FrontController@cultural');
 Route::get('historia-papusclub', 'FrontController@historia_papusclub');
 Route::get('historia-papusclub-ver-mas', 'FrontController@historia_papusclub_ver_mas');
 Route::get('historia-sede-callao', 'FrontController@historia_sede_callao');
