@@ -21,6 +21,9 @@ function buscarambientes(){
 	location.href="anular-reserva-ambiente-b-al";
 }
 
-function ingresar_user(){
+function openIngresaruser(){
 	location.href="inicio-after-login";
+}
+function confirmar_registro_solicitud_postulante(){
+	location.href="REGISTRAR-SOLICITUD-POSTULANTE-O-AL";
 }

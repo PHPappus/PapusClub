@@ -211,7 +211,7 @@
 								</li>
 								<li><a href="#" title="ir_postulante" target="_self">POSTULANTE<span class="despliegue">▼</span></a>
 									<ul>
-										<li><a href="#" title="ir_registrar_postulante" target="_self">REGISTRAR POSTULANTE</a></li>
+										<li><a href="registrar-solicitud-postulante-al" title="ir_registrar_postulante" target="_self">REGISTRAR POSTULANTE</a></li>
 										<li><a href="#" title="ir_modificar_postulante" target="_self">MODIFICAR POSTULANTE</a></li>
 									</ul>						
 								</li>
@@ -273,7 +273,7 @@
 <!---Cuerpo -->
 
 <main class="main">
-	@yield('content')
+@yield('content')
 </main>
 <!--Pie de págna-->
 
