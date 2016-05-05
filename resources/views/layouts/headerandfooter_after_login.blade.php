@@ -211,13 +211,8 @@
 								</li>
 								<li><a href="#" title="ir_postulante" target="_self">POSTULANTE<span class="despliegue">▼</span></a>
 									<ul>
-<<<<<<< HEAD
 										<li><a href="registrar-solicitud-postulante-al" title="ir_registrar_postulante" target="_self">REGISTRAR POSTULANTE</a></li>
 										<li><a href="#" title="ir_modificar_postulante" target="_self">MODIFICAR POSTULANTE</a></li>
-=======
-										<li><a href="registrar-postulante" title="ir_registrar_postulante" target="_self">REGISTRAR POSTULANTE</a></li>
-										<li><a href="modificar-postulante" title="ir_modificar_postulante" target="_self">MODIFICAR POSTULANTE</a></li>
->>>>>>> 011207f5953acb3f6418601ffa944e53ca2cb0fd
 									</ul>						
 								</li>
 								<li><a href="#" title="ir_ambiente" target="_self">AMBIENTE<span class="despliegue">▼</span></a>
