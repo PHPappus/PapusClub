@@ -52,7 +52,7 @@
 						<select class="form-control" name="sede" style="max-width: 150px " >
 					                <option value="1" default>CALLAO</option>
 					                <option value="2">SURQUILLO</option>
-					                <option value="3">SURQUILLO</option>
+					                <option value="3">BARRANCO</option>
 					    </select>	
 					</div>
 				</div>
