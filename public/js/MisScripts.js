@@ -26,18 +26,11 @@ function openHistoriaPapusClub(){
 }
 
 
-<<<<<<< HEAD
 
-=======
-function openIngresaruser(){
-	location.href="tipo-login";
-}
->>>>>>> 22d1da32d2c1433e0fdc29c0422699297048180b
 function confirmar_registro_solicitud_postulante(){
 	location.href="REGISTRAR-SOLICITUD-POSTULANTE-O-AL";
 }
 
-<<<<<<< HEAD
 
 function registrarAmbiente(){
 	location.href="registrar-ambiente";
@@ -75,20 +68,3 @@ function reservarBungalow(){
 function buscarBungalow(){
 	location.href="bungalows";
 }
-=======
-function ir_inicio_como_socio(){
-	location.href="inicio-al-socio";
-}
-function ir_inicio_como_admin(){
-	location.href="inicio-al-admin";
-}
-function ir_inicio_como_gerente(){
-	location.href="inicio-al-gerente";
-}
-function ir_inicio_como_admin_pagos(){
-	location.href="inicio-al-admin-pagos";
-}
-function ir_inicio_como_admin_registros(){
-	location.href="inicio-al-admin-registros";
-}
->>>>>>> 22d1da32d2c1433e0fdc29c0422699297048180b

@@ -5,15 +5,10 @@
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	{!!Html::style('css/jquery.bxslider.css')!!}
-	{!!Html::style('css/font-awesome.css')!!}
-	{!!Html::style('css/bootstrap.css')!!}
-	{!!Html::style('css/MisEstilos.css')!!}
-	<!-- <link rel="stylesheet" href="css/jquery.bxslider.css"> -->
-	<!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
-	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/MisEstilos.css"> -->
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/MisEstilos.css">
 	
 </head>
 
@@ -37,8 +32,8 @@
 		<div class="content">
 			<div class="logo">
 				<div class="edit-logo">
-					<a href="/" title="Logo oficial de Papus Club">
-						<img src="images/logo.png" alt="Logo Papus Club" href="/">
+					<a href="inicio" title="Logo oficial de Papus Club">
+						<img src="images/logo.png" alt="Logo Papus Club" href="inicio.html">
 					</a>
 				</div>
 			</div>
@@ -142,69 +137,41 @@
 
 <main class="main">
 	<div class="content" style="max-width: 100%;">
-		<div class="container">
-			@include('alerts.errors')
-			@include('alerts.request')
-			<br/><br/><br/>
-			<div class="row">
-				<div class="col-sm-12 text-center">
-					<p class="lead label-bg"><strong>BIENVENIDOS A PAPUS CLUB</strong></p>
-				</div>
-			</div>
-		</div>
-		<div class="container login-box">
-			
-			{!!Form::open(['route'=>'log.store', 'method'=>'POST', 'class' =>'form-horizontal'])!!}
+	<div class="container login-box">
+		<form action="" class="form-horizontal ">
 				<div class="form-group text-left ">
-						<label for="Usuario" class="control-label col-sm-2 col-sm-offset-2 lead"><strong>Usuario:</strong></label>
-						<div class="col-sm-5">
-							{!!Form::email('email',null,['class'=>'form-control', 'placeholder'=>'Ingresa tu correo'])!!}
+					<br/>
+					<label for="Usuario" class="control-label col-sm-2 col-sm-offset-2 lead"><strong>Usuario:</strong></label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" placeholder="Ingrese su tarjeta de socio o correo electronico">
+					</div>
+				</div>			
+				<div class="form-group">
+					<br/>
+					<label for="Contraseña" class="control-label col-sm-2 col-sm-offset-2 lead"><strong>Contraseña:</strong></label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" placeholder="Ingrese su contraseña">
+					</div>
+				</div>		
+				<div class="form-group text-center">
+					<button class="btn btn-lg btn-primary" onclick="ingresar_user()"><span class="glyphicon glyphicon-log-in"> </span> Ingresar</button>
+				</div>	
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-8 text-right">
+							<a class="btn btn-link login-links" href="#"><strong>¿No recuerdas tu contraseña?</strong></a>			
 						</div>
-					</div>			
-					<div class="form-group">
-						<br/>
-						<label for="Contraseña" class="control-label col-sm-2 col-sm-offset-2 lead"><strong>Contraseña:</strong></label>
-						<div class="col-sm-5">
-							{!!Form::password('password',['class'=>'form-control', 'placeholder'=>'Ingrese su contraseña'])!!}
-						</div>
-					</div>	
-					<div class="form-group">
-						<label for="type" class="control-label col-sm-3 col-sm-offset-2 lead"><strong>Tipo de Usuario:</strong></label>
-						<div class="col-sm-5">
-							<select id="typeuser" class="form-control inputmodify" name="type" type="type" style="max-width: 210px " >
-				                <option value="socio" default>Socio</option>
-				                <option value="gerente">Gerente</option>
-								<option value="admin-g">Administrador general</option>
-								<option value="admin-p">Administrador de pagos</option>
-								<option value="admin-r">Administrador de registros</option>
-							</select>
+					</div>
+					<div class="row">
+						<div class="col-sm-8 text-right">
+							<a class="btn btn-link login-links" href="#"><strong>¿Es usted nuevo socio?</strong></a>
 						</div>	
 					</div>
-					<div class="col-sm-12 text-center">
-						{!!Form::submit('Ingresar',['class'=>'btn btn-lg btn-primary'])!!}
-					</div>
-			{!!Form::close()!!}
-
-			
-
-			<!-- <div class="row">
-				<div class="col-sm-12 text-center">
-					<button class="btn btn-lg btn-primary" onclick="openIngresaruser()"><span class="glyphicon glyphicon-log-in"> </span> Ingresar</button>
+					<br/>
+					<br/>
 				</div>
-			</div> -->
-			<div class="row">
-				<div class="col-sm-12 text-right">
-					<a class="btn btn-link login-links" href="#"><strong>¿No recuerdas tu contraseña?</strong></a>			
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12 text-right">
-					<a class="btn btn-link login-links" href="#"><strong>¿Es usted nuevo socio?</strong></a>
-				</div>	
-			</div>
-			<br/>
-			<br/>
-		</div>
+		</form>
+	</div>
 	</div>
 </main>
 
@@ -235,20 +202,13 @@
 	</div>
 </footer>
 
-
-	{!!Html::script('js/jquery-1.11.3.min.js')!!}
-	{!!Html::script('js/bootstrap.js')!!}
-	{!!Html::script('js/jquery.bxslider.min.js')!!}
-	{!!Html::script('js/MisScripts.js')!!}
-
-
 <!-- JQuery -->
-	<!-- <script src="js/jquery-1.11.3.min.js"></script> -->
+	<script src="js/jquery-1.11.3.min.js"></script>
 	<!-- Bootstrap -->
-	<!-- <script type="text/javascript" src="js/bootstrap.js"></script> -->
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<!-- BXSlider -->
-	<!-- <script src="js/jquery.bxslider.min.js"></script> -->
+	<script src="js/jquery.bxslider.min.js"></script>
 	<!-- Mis Scripts -->
-	<!-- <script src="js/MisScripts.js"></script> -->
+	<script src="js/MisScripts.js"></script>
 </body>
 </html>

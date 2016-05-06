@@ -103,7 +103,7 @@
 					<!-- Eventos -->
 					<li><a href="#">EVENTOS<span class="flecha">▼</span></a>
 						<ul>
-							<li><a href="#" title="ir a evento 1" target="_self">Evento 1<span class="flecha">▼</span></a>
+							<li><a href="cultural" title="ir a evento cultural" target="_self">Cultural<span class="flecha">▼</span></a>
 								<ul>
 									<li><a href="#" title="ir a subevento 1" target="_self">Subevento 1</a></li>
 									<li><a href="#" title="ir a subevento 2" target="_self">Subevento 2</a></li>

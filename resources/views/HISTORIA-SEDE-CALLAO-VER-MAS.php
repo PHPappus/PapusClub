@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Papus Login</title>
+	<title>Historia Sede Callao</title>
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	{!!Html::style('css/jquery.bxslider.css')!!}
-	{!!Html::style('css/font-awesome.css')!!}
-	{!!Html::style('css/bootstrap.css')!!}
-	{!!Html::style('css/MisEstilos.css')!!}
-	<!-- <link rel="stylesheet" href="css/jquery.bxslider.css"> -->
-	<!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
-	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/MisEstilos.css"> -->
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/MisEstilos.css">
 	
 </head>
 
@@ -22,9 +17,9 @@
 <header class="header">
 	<div class="content clearfix">
 	<!--Input de buscador de la parte superior derecha-->
-		<nav class="no-user">
-			<div class="search_box ">
-				<form action="#" id="search-box" method="get" style="display: none;">
+		<nav class="search">
+			<div class="search_box">
+				<form action="#" id="search-box" method="get">
 					<label class="hidden" for="inputbusqueda">Buscar</label>
                     <input type="text" placeholder="Ingresa tu búsqueda" id="inputbusqueda" name="conte">
                     <span class="glyphicon glyphicon-search" href="#"></span>
@@ -43,7 +38,7 @@
 				</div>
 			</div>
 			<!--Opciones de menu-->
-			<nav class="menu" id="menu" style="display: none">
+			<nav class="menu" id="menu">
 				<ul>
 					<li><a href="#">PAPUS CLUB<span class="despliegue">▼</span></a>
 						<ul>
@@ -55,11 +50,11 @@
 					<!-- Sedes -->
 					<li><a href="#">SEDES<span class="despliegue">▼</span></a>
 						<ul>
-							<li><a href="#" title="Callao" target="_self">Callao<span class="despliegue">▼</span></a>
+							<li><a href="historia-sede-callao" title="Callao" target="_self">Callao<span class="despliegue">▼</span></a>
 								<ul>
 									<li><a href="#" title="Concesiones" target="_self">Concesiones</a></li>
 									<li><a href="#" title="Servicios" target="_self">Servicios</a></li>
-									<li><a href="#" title="Bungalows" target="_self">Bungalows</a></li>
+									<li><a href="reserva-bungalow" title="Bungalows" target="_self">Bungalows</a></li>
 								</ul>
 							</li>
 							<li><a href="#" title="Surquillo" target="_self">Surquillo<span class="despliegue">▼</span></a>
@@ -81,9 +76,9 @@
 					<!-- Opción Actividades -->
 					<li><a href="#">ACTIVIDADES<span class="despliegue">▼</span></a>
 						<ul>
-							<li><a href="#" title="Actividad 1" target="_self">Talleres<span class="despliegue">▼</span></a>
+							<li><a href="#" title="ir a cursos" target="_self">Cursos<span class="despliegue">▼</span></a>
 								<ul>
-									<li><a href="#" title="Actividad 1.1" target="_self">Actividad 1.1</a></li>
+									<li><a href="futbol" title="ir a futbol" target="_self">Futbol</a></li>
 									<li><a href="#" title="Actividad 1.2" target="_self">Actividad 1.2</a></li>
 									<li><a href="#" title="Actividad 1.3" target="_self">Actividad 1.3</a></li>
 								</ul>
@@ -131,7 +126,7 @@
 						</ul>
 					</li>
 					<!-- Opción Login -->
-					<li><a href="#">LOGIN <span class="glyphicon glyphicon-user"></span> </a></li>
+					<li><a href="login">LOGIN <span class="glyphicon glyphicon-user"></span> </a></li>
 				</ul>
 			</nav>
 		</div>
@@ -142,70 +137,64 @@
 
 <main class="main">
 	<div class="content" style="max-width: 100%;">
-		<div class="container">
-			@include('alerts.errors')
-			@include('alerts.request')
-			<br/><br/><br/>
-			<div class="row">
-				<div class="col-sm-12 text-center">
-					<p class="lead label-bg"><strong>BIENVENIDOS A PAPUS CLUB</strong></p>
-				</div>
-			</div>
+	<div class="container" id="ruta-navegacion">
+		<br/>
+		<div class="row">
+			<a class="btn btn-link text-left withoutpadding" href="inicio">INICIO <span class="glyphicon glyphicon-chevron-right"></span></a>
+			<button class="btn btn-link text-left withoutpadding" href="#">SEDES <span class="glyphicon glyphicon-chevron-right"></span></button>
+			<label class="text-left withoutpadding">CALLAO</button></label>
+
 		</div>
-		<div class="container login-box">
-			
-			{!!Form::open(['route'=>'log.store', 'method'=>'POST', 'class' =>'form-horizontal'])!!}
-				<div class="form-group text-left ">
-						<label for="Usuario" class="control-label col-sm-2 col-sm-offset-2 lead"><strong>Usuario:</strong></label>
-						<div class="col-sm-5">
-							{!!Form::email('email',null,['class'=>'form-control', 'placeholder'=>'Ingresa tu correo'])!!}
-						</div>
-					</div>			
-					<div class="form-group">
-						<br/>
-						<label for="Contraseña" class="control-label col-sm-2 col-sm-offset-2 lead"><strong>Contraseña:</strong></label>
-						<div class="col-sm-5">
-							{!!Form::password('password',['class'=>'form-control', 'placeholder'=>'Ingrese su contraseña'])!!}
-						</div>
-					</div>	
-					<div class="form-group">
-						<label for="type" class="control-label col-sm-3 col-sm-offset-2 lead"><strong>Tipo de Usuario:</strong></label>
-						<div class="col-sm-5">
-							<select id="typeuser" class="form-control inputmodify" name="type" type="type" style="max-width: 210px " >
-				                <option value="socio" default>Socio</option>
-				                <option value="gerente">Gerente</option>
-								<option value="admin-g">Administrador general</option>
-								<option value="admin-p">Administrador de pagos</option>
-								<option value="admin-r">Administrador de registros</option>
-							</select>
-						</div>	
-					</div>
-					<div class="col-sm-12 text-center">
-						{!!Form::submit('Ingresar',['class'=>'btn btn-lg btn-primary'])!!}
-					</div>
-			{!!Form::close()!!}
-
-			
-
-			<!-- <div class="row">
-				<div class="col-sm-12 text-center">
-					<button class="btn btn-lg btn-primary" onclick="openIngresaruser()"><span class="glyphicon glyphicon-log-in"> </span> Ingresar</button>
-				</div>
-			</div> -->
-			<div class="row">
-				<div class="col-sm-12 text-right">
-					<a class="btn btn-link login-links" href="#"><strong>¿No recuerdas tu contraseña?</strong></a>			
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12 text-right">
-					<a class="btn btn-link login-links" href="#"><strong>¿Es usted nuevo socio?</strong></a>
-				</div>	
-			</div>
-			<br/>
-			<br/>
+		<br/>
+	</div>
+	<div class="container">
+		<div class="row">
+  			<div class="col-sm-12 withoutpadding">
+  			<!-- bxslider es un plugin que permite crear sucesión de imagenes -->
+                <ul class="bxslider">
+                	<li><img class="slider img-responsive" src="images/bungalow4.jpg" /></li>
+                    <li><img class="slider img-responsive" src="images/bungalow3.jpg" /></li> 
+                    <li><img class="slider img-responsive" src="images/bungalow1.jpg" /></li>  
+                </ul>  						
+  			</div>
+  			
 		</div>
 	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<p class="lead"><strong>HISTORIA CALLAO</strong></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 text-left">
+				<strong>Historia</strong>
+				<p>
+					<br/>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure odit totam voluptate, quisquam earum facere fugiat harum non iste voluptatibus rerum dolorum, pariatur, aut natus dolor. Est vitae expedita ipsam.lore
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, ipsam, quos. In animi aliquid debitis officia officiis tempore labore ipsum placeat harum, vitae fuga perspiciatis possimus odit. Aut, nisi, tempore!
+				</p>
+			</div>
+			<div id="marca" class="col-sm-12 text-left">
+				<strong>Infraestructura</strong>	
+				<p align="justify">
+					<br/>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus excepturi distinctio quis quia culpa aliquam inventore sint maxime eveniet est voluptates eius quam, dolorem laborum odio rem voluptatibus eum harum!
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quia deserunt veniam maiores tenetur autem doloribus eum illo nulla inventore ducimus, commodi enim! Amet voluptatum libero quo exercitationem, porro quibusdam!
+					<br><br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<br><br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<br><br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<br><br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.					
+				</p>
+			</div>
+		</div>
+	</div>
+	</div>
+
 </main>
 
 <!--Pie de págna-->
@@ -235,20 +224,13 @@
 	</div>
 </footer>
 
-
-	{!!Html::script('js/jquery-1.11.3.min.js')!!}
-	{!!Html::script('js/bootstrap.js')!!}
-	{!!Html::script('js/jquery.bxslider.min.js')!!}
-	{!!Html::script('js/MisScripts.js')!!}
-
-
 <!-- JQuery -->
-	<!-- <script src="js/jquery-1.11.3.min.js"></script> -->
+	<script src="js/jquery-1.11.3.min.js"></script>
 	<!-- Bootstrap -->
-	<!-- <script type="text/javascript" src="js/bootstrap.js"></script> -->
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<!-- BXSlider -->
-	<!-- <script src="js/jquery.bxslider.min.js"></script> -->
+	<script src="js/jquery.bxslider.min.js"></script>
 	<!-- Mis Scripts -->
-	<!-- <script src="js/MisScripts.js"></script> -->
+	<script src="js/MisScripts.js"></script>
 </body>
 </html>
