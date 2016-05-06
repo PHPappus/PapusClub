@@ -23,7 +23,7 @@
 					</div>
 				</div>
 				<!--Opciones de menu-->
-				<nav class="menu" id="menu-1">
+				<nav class="menu" id="menu">
 					<ul>
 						<li><a href="#">PAPUS CLUB<span class="despliegue">▼</span></a>
 							<ul>
@@ -58,8 +58,34 @@
 								</li>
 							</ul>
 						</li>
-						<!-- Opción Actividades -->
-						<li><a href="#">ACTIVIDADES<span class="despliegue">▼</span></a>
+						<!-- Opción Agenda Cultural -->
+						<li><a href="#">AGENDA CULTURAL<span class="despliegue">▼</span></a>
+							<ul>
+								<li><a href="#" title="Agenda 1" target="_self">Evento 1<span class="despliegue">▼</span></a>
+									<ul>
+										<li><a href="#" title="Agenda 1-1" target="_self">Evento 1.1</a></li>
+										<li><a href="#" title="Agenda 1-2" target="_self">Evento 1.2</a></li>
+										<li><a href="#" title="Agenda 1-3" target="_self">Evento 1.3</a></li>
+									</ul>
+								</li>
+								<li><a href="#" title="Agenda 2" target="_self">Evento 2<span class="despliegue">▼</span></a>
+									<ul>
+										<li><a href="#" title="Agenda 2-1" target="_self">Evento 2.1</a></li>
+										<li><a href="#" title="Agenda 2-2" target="_self">Evento 2.2</a></li>
+										<li><a href="#" title="Agenda 2-3" target="_self">Evento 2.3</a></li>
+									</ul>						
+								</li>
+								<li><a href="#" title="Agenda 3" target="_self">Evento 3<span class="despliegue">▼</span></a>
+									<ul>
+										<li><a href="#" title="Agenda 3-1" target="_self">Evento 3.1</a></li>
+										<li><a href="#" title="Agenda 3-2" target="_self">Evento 3.1</a></li>
+										<li><a href="#" title="Agenda 3-3" target="_self">Evento 3.1</a></li>
+									</ul>						
+								</li>
+							</ul>
+						</li>
+						<!-- Opción Talleres -->
+						<li><a href="#">TALLERES<span class="despliegue">▼</span></a>
 							<ul>
 								<li><a href="#" title="ir a cursos" target="_self">TALLERES<span class="despliegue">▼</span></a>
 									<ul>
@@ -84,45 +110,43 @@
 								</li>
 							</ul>					
 						</li>
-						<!-- Opción Eventos -->
-						<li><a href="#">EVENTOS<span class="despliegue">▼</span></a>
+						<!-- Opción Trámites -->
+						<li><a href="#">TRÁMITES<span class="despliegue">▼</span></a>
 							<ul>
-								<li><a href="#" title="Evento 1" target="_self">Evento 1<span class="despliegue">▼</span></a>
+								<li><a href="#" title="Tramite 1" target="_self">Evento 1<span class="despliegue">▼</span></a>
 									<ul>
-										<li><a href="#" title="Evento 1-1" target="_self">Evento 1.1</a></li>
-										<li><a href="#" title="Evento 1-2" target="_self">Evento 1.2</a></li>
-										<li><a href="#" title="Evento 1-3" target="_self">Evento 1.3</a></li>
+										<li><a href="#" title="Tramite 1-1" target="_self">Evento 1.1</a></li>
+										<li><a href="#" title="Tramite 1-2" target="_self">Evento 1.2</a></li>
+										<li><a href="#" title="Tramite 1-3" target="_self">Evento 1.3</a></li>
 									</ul>
 								</li>
-								<li><a href="#" title="Evento 2" target="_self">Evento 2<span class="despliegue">▼</span></a>
+								<li><a href="#" title="Tramite 2" target="_self">Evento 2<span class="despliegue">▼</span></a>
 									<ul>
-										<li><a href="#" title="Evento 2-1" target="_self">Evento 2.1</a></li>
-										<li><a href="#" title="Evento 2-2" target="_self">Evento 2.2</a></li>
-										<li><a href="#" title="Evento 2-3" target="_self">Evento 2.3</a></li>
+										<li><a href="#" title="Tramite 2-1" target="_self">Evento 2.1</a></li>
+										<li><a href="#" title="Tramite 2-2" target="_self">Evento 2.2</a></li>
+										<li><a href="#" title="Tramite 2-3" target="_self">Evento 2.3</a></li>
 									</ul>						
 								</li>
-								<li><a href="#" title="Evento 3" target="_self">Evento 3<span class="despliegue">▼</span></a>
+								<li><a href="#" title="Tramite 3" target="_self">Evento 3<span class="despliegue">▼</span></a>
 									<ul>
-										<li><a href="#" title="Evento 3-1" target="_self">Evento 3.1</a></li>
-										<li><a href="#" title="Evento 3-2" target="_self">Evento 3.1</a></li>
-										<li><a href="#" title="Evento 3-3" target="_self">Evento 3.1</a></li>
+										<li><a href="#" title="Tramite 3-1" target="_self">Evento 3.1</a></li>
+										<li><a href="#" title="Tramite 3-2" target="_self">Evento 3.1</a></li>
+										<li><a href="#" title="Tramite 3-3" target="_self">Evento 3.1</a></li>
 									</ul>						
 								</li>
 							</ul>
 						</li>
+						<!-- Opción Login -->
+						<li><a href="login">LOGIN/LOG-OUT <span class="glyphicon glyphicon-user"></span> </a></li>
 					</ul>
 				</nav>
 		    	<!--menu de opciones debajo de la superior-->
 				<nav class="menu" id="menu-2">
 					<ul>
-						<li><a href="#">CUENTA<span class="despliegue">▼</span></a>
-							<ul>
-								<li><a href="#" title="ir a información" target="_self">INFORMACIÓN</a></li>
-								<li><a href="#" title="ir a configuración" target="_self">CONFIGURACIÓN</a></li>
-							</ul>
+						<li><a href="cuenta-al-socio">CUENTA</a>
 						</li>
 						<!-- Sedes -->
-						<li><a href="#">CURSOS<span class="despliegue">▼</span></a>
+						<li><a href="#">PAGO<span class="despliegue">▼</span></a>
 							<ul>
 								<li><a href="#" title="ir a curso 1" target="_self">CURSO 2<span class="despliegue">▼</span></a>
 									<ul>
@@ -139,7 +163,7 @@
 							</ul>
 						</li>
 						<!-- Opción Actividades -->
-						<li><a href="#">INSCRIPCIONES/RESERVAS<span class="despliegue">▼</span></a>
+						<li><a href="#">TALLER<span class="despliegue">▼</span></a>
 							<ul>
 								<li><a href="#" title="ir a ambientes" target="_self">AMBIENTES<span class="despliegue">▼</span></a>
 									<ul>
@@ -175,7 +199,7 @@
 							</ul>					
 						</li>
 						<!-- Opción Eventos -->
-						<li><a href="#">PAGOS<span class="despliegue">▼</span></a>
+						<li><a href="#">ACTIVIDAD<span class="despliegue">▼</span></a>
 							<ul>
 								<li><a href="#" title="Evento 1" target="_self">VER DETALLES<span class="despliegue">▼</span></a>
 									<ul>
@@ -186,7 +210,7 @@
 							</ul>
 						</li>
 						<!-- Opción TRAMITES -->
-						<li><a href="#">TRÁMITES<span class="despliegue">▼</span></a>
+						<li><a href="#">AMBIENTE<span class="despliegue">▼</span></a>
 							<ul>
 								<li><a href="#" title="ir_tramites" target="_self">VER TRÁMITES<span class="despliegue">▼</span></a>
 									<ul>
@@ -198,7 +222,7 @@
 							</ul>
 						</li>
 						<!-- Opción MANTENIMIENTO -->
-						<li><a href="#">MANTENIMIENTO<span class="despliegue">▼</span></a>
+						<li><a href="#">BUNGALOW<span class="despliegue">▼</span></a>
 							<ul>
 								<li><a href="#" title="ir_socio" target="_self">SOCIO<span class="despliegue">▼</span></a>
 									<ul>
