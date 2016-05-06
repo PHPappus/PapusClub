@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>REGISTRAR POSTULANTE</title>
+	<title>CUENTA-AL-SOCIO</title>
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/datepicker.css">
 	<link rel="stylesheet" type="text/css" href="css/MisEstilos.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/estilos.css"> -->
 	
@@ -43,6 +42,24 @@
 						<div role="tabpanel" class="tab-pane active" id="seccion1">
 							<form action="" class="form-horizontal form-border">
 								<br/><br/>
+								<div class="form-group">
+									<div class="col-sm-6">
+										<div class="col-sm-6 text-left">
+											<label for="" class="control-label">Nro:</label>
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" id="nro" placeholder="#####" style="max-width: 250px">
+										</div>		
+									</div>
+									<div class="col-sm-6">
+										<div class="col-sm-6 text-left">
+											<label for="" class="control-label">Fecha de Registro:</label>
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" id="fechaR" placeholder="MM/DD/YYYY" style="max-width: 250px">
+										</div>		
+									</div>
+								</div>
 								<div class="form-group">
 									<div class="col-sm-6">
 										<div class="col-sm-6 text-left">
@@ -637,6 +654,7 @@
 	<script src="js/jquery.bxslider.min.js"></script>
 	<!-- Mis Scripts -->
 	<script src="js/MisScripts.js"></script>
+
 
 </body>
 </html>

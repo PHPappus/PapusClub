@@ -137,41 +137,48 @@
 
 <main class="main">
 	<div class="content" style="max-width: 100%;">
-	<div class="container login-box">
-		<form action="" class="form-horizontal ">
-				<div class="form-group text-left ">
-					<br/>
-					<label for="Usuario" class="control-label col-sm-2 col-sm-offset-2 lead"><strong>Usuario:</strong></label>
-					<div class="col-sm-5">
-						<input type="text" class="form-control" placeholder="Ingrese su tarjeta de socio o correo electronico">
-					</div>
-				</div>			
-				<div class="form-group">
-					<br/>
-					<label for="Contraseña" class="control-label col-sm-2 col-sm-offset-2 lead"><strong>Contraseña:</strong></label>
-					<div class="col-sm-5">
-						<input type="text" class="form-control" placeholder="Ingrese su contraseña">
-					</div>
-				</div>		
-		</form>
-		<div class="row">
-			<div class="col-sm-12 text-center">
-				<button class="btn btn-lg btn-primary" onclick="openIngresaruser()"><span class="glyphicon glyphicon-log-in"> </span> Ingresar</button>
+		<div class="container">
+			<br/><br/><br/>
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p class="lead"><strong>Bienvenidos a Papus Club</strong></p>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-12 text-right">
-				<a class="btn btn-link login-links" href="#"><strong>¿No recuerdas tu contraseña?</strong></a>			
+		<div class="container login-box">
+			<form action="" class="form-horizontal ">
+					<div class="form-group text-left ">
+						<label for="Usuario" class="control-label col-sm-2 col-sm-offset-2 lead"><strong>Usuario:</strong></label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" placeholder="Ingrese su tarjeta de socio o correo electronico">
+						</div>
+					</div>			
+					<div class="form-group">
+						<br/>
+						<label for="Contraseña" class="control-label col-sm-2 col-sm-offset-2 lead"><strong>Contraseña:</strong></label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" placeholder="Ingrese su contraseña">
+						</div>
+					</div>		
+			</form>
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<button class="btn btn-lg btn-primary" onclick="openIngresaruser()"><span class="glyphicon glyphicon-log-in"> </span> Ingresar</button>
+				</div>
 			</div>
+			<div class="row">
+				<div class="col-sm-12 text-right">
+					<a class="btn btn-link login-links" href="#"><strong>¿No recuerdas tu contraseña?</strong></a>			
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-right">
+					<a class="btn btn-link login-links" href="#"><strong>¿Es usted nuevo socio?</strong></a>
+				</div>	
+			</div>
+			<br/>
+			<br/>
 		</div>
-		<div class="row">
-			<div class="col-sm-12 text-right">
-				<a class="btn btn-link login-links" href="#"><strong>¿Es usted nuevo socio?</strong></a>
-			</div>	
-		</div>
-		<br/>
-		<br/>
-	</div>
 	</div>
 </main>
 

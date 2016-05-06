@@ -14,8 +14,8 @@
 	
 </head>
 <body>
-@extends('layouts.headerandfooter-al-admin')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <!---Cuerpo -->
 <main class="main">
 	<div class="content" style="max-width: 100%;">
@@ -628,7 +628,7 @@
 			</div>
 		</div>
 	</div>		
-@stop
+<?php $__env->stopSection(); ?>
 <!-- JQuery -->
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<!-- Bootstrap -->
@@ -640,3 +640,4 @@
 
 </body>
 </html>
+<?php echo $__env->make('layouts.headerandfooter-al-admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

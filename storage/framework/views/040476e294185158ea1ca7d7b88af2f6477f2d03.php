@@ -212,7 +212,7 @@
 <!---Cuerpo -->
 
 <main class="main">
-@yield('content')
+<?php echo $__env->yieldContent('content'); ?>
 </main>
 <!--Pie de págna-->
 
