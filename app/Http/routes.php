@@ -14,15 +14,54 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
+Route::get('login', 'FrontController@login');
 Route::get('/', 'FrontController@index');
+/*
 Route::get('/{nombre}', function ($nombre) {
      return view($nombre);
-});
+});*/
+
+Route::resource('usuario','UsuarioController');
+
+Route::resource('log','LogController');
+Route::get('logout','LogController@logout');
 
 
-/*
-Route::get('/', 'FrontController@index');
-Route::get('login', 'FrontController@login');
+//Socio
+Route::resource('socio','SocioController');
+Route::get('cuenta-s','SocioController@cuenta');
+Route::get('ambientes-s','SocioController@ambientes');
+Route::get('anular-reserva-ambiente-s','SocioController@anularReservaAmbiente');
+Route::get('anular-reserva-ambiente-b-s','SocioController@anularReservaAmbienteB');
+Route::get('pagos-s','SocioController@pagos');
+	//Socio.talleres
+Route::get('talleres-s','SocioController@talleres');
+Route::get('futbol-s','SocioController@futbol');
+	//Socio.bungalows
+Route::get('bungalows-s','SocioController@bungalow');
+Route::get('reserva-bungalows-s','SocioController@bungalowReserva');
+Route::get('reserva-bungalows-b-s','SocioController@bungalowReservaB');
+
+
+//Administrados de registros
+Route::resource('admin-registros','AdminRegistrosController');
+Route::get('ambientes-ar','AdminRegistrosController@ambientes');
+Route::get('registrar-ambiente','AdminRegistrosController@registrar');
+Route::get('modificar-ambiente','AdminRegistrosController@modificar');
+
+//Gerente
+Route::resource('gerente','GerenteController');
+
+//Administrados de pagos
+Route::resource('admin-pagos','AdminPagosController');
+
+//Administrador general
+Route::resource('admin-general','AdminGeneralController');
+
+
+
+
+
 Route::get('futbol', 'FrontController@futbol');
 Route::get('historia-papusclub', 'FrontController@historia_papusclub');
 Route::get('historia-papusclub-ver-mas', 'FrontController@historia_papusclub_ver_mas');
@@ -30,13 +69,9 @@ Route::get('historia-sede-callao', 'FrontController@historia_sede_callao');
 Route::get('historia-sede-callao-ver-mas', 'FrontController@historia_sede_callao_ver_mas');
 Route::get('reserva-bungalow', 'FrontController@reserva_bungalow');
 Route::get('reserva-bungalow-busqueda', 'FrontController@reserva_bungalow_busqueda');
-Route::get('inicio-after-login','FrontController@inicio_after_login');
-Route::get('registrar-ambiente-al','FrontController@registrar_ambiente_al');
-Route::get('modificar-ambiente-al','FrontController@modificar_ambiente_al');
 Route::get('registrar-concesionaria-al','FrontController@registrar_concesionaria_al');
 Route::get('registrar-precio-pref-bungalows-al','FrontController@registrar_precio_pref_bungalows_al');
 Route::get('registrar-nuevo-producto-al','FrontController@registrar_nuevo_producto_al');
 Route::get('registrar-precio-especial-membresia-al','FrontController@registrar_precio_especial_membresia_al');
 Route::get('registrar-precio-pref-bungalows-1-al','FrontController@registrar_precio_pref_bungalows_1_al');
 Route::get('registrar-precio-especial-membresia-1-al','FrontController@registrar_precio_especial_membresia_1_al');
-*/

@@ -13,280 +13,56 @@
 		</nav>
 	</div>
 		<!--menu de opciones superior-->
-		<nav class="main-menu-alog">
+		<nav class="main-menu">
 			<div class="content">
 				<div class="logo">
 					<div class="edit-logo">
-						<a href="inicio-after-login" title="Logo oficial de Papus Club">
+						<a href="{!!URL::to('/socio')!!}" title="Logo oficial de Papus Club">
 							<img src="images/logo.png" alt="Logo Papus Club" href="/">
 						</a>
 					</div>
 				</div>
 				<!--Opciones de menu-->
+		    	<!--menu de opciones debajo de la superior-->
 				<nav class="menu" id="menu">
 					<ul>
-						<li><a href="#">PAPUS CLUB<span class="despliegue">▼</span></a>
-							<ul>
-								<li><a href="historia-papusclub" title="A cerca del club" target="_self">Acerca del Club</a></li>
-								<li><a href="#" title="Mesa directiva" target="_self">Mesa Directiva</a></li>
-								<li><a href="#" title="Reglas del club" target="_self">Reglamento del Club</a></li>
-							</ul>
+						<li><a href="#">{!!Auth::user()->name!!}  <span class="glyphicon glyphicon-user"></span></a>
+									<ul>
+										<li><a href="{!!URL::to('/cuenta-s')!!}" title="ir a ver curso 1" target="_self">CUENTA</a></li>
+										<li><a href="{!!URL::to('/logout')!!}" title="LOGOUT" target="_self">LOGOUT</a></li>
+									</ul>
 						</li>
 						<!-- Sedes -->
-						<li><a href="#">SEDES<span class="despliegue">▼</span></a>
-							<ul>
-								<li><a href="historia-sede-callao" title="Callao" target="_self">Callao<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Concesiones" target="_self">Concesiones</a></li>
-										<li><a href="#" title="Servicios" target="_self">Servicios</a></li>
-										<li><a href="reserva-bungalow" title="Bungalows" target="_self">Bungalows</a></li>
-									</ul>
-								</li>
-								<li><a href="#" title="Surquillo" target="_self">Surquillo<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Concesiones" target="_self">Concesiones</a></li>
-										<li><a href="#" title="Servicios" target="_self">Servicios</a></li>
-										<li><a href="#" title="Bungalows" target="_self">Bungalows</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="Barranco" target="_self">Barranco<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Concesiones" target="_self">Concesiones</a></li>
-										<li><a href="#" title="Servicios" target="_self">Servicios</a></li>
-										<li><a href="#" title="Bungalows" target="_self">Bungalows</a></li>
-									</ul>						
-								</li>
-							</ul>
-						</li>
-						<!-- Opción Agenda Cultural -->
-						<li><a href="#">AGENDA CULTURAL<span class="despliegue">▼</span></a>
-							<ul>
-								<li><a href="#" title="Agenda 1" target="_self">Evento 1<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Agenda 1-1" target="_self">Evento 1.1</a></li>
-										<li><a href="#" title="Agenda 1-2" target="_self">Evento 1.2</a></li>
-										<li><a href="#" title="Agenda 1-3" target="_self">Evento 1.3</a></li>
-									</ul>
-								</li>
-								<li><a href="#" title="Agenda 2" target="_self">Evento 2<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Agenda 2-1" target="_self">Evento 2.1</a></li>
-										<li><a href="#" title="Agenda 2-2" target="_self">Evento 2.2</a></li>
-										<li><a href="#" title="Agenda 2-3" target="_self">Evento 2.3</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="Agenda 3" target="_self">Evento 3<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Agenda 3-1" target="_self">Evento 3.1</a></li>
-										<li><a href="#" title="Agenda 3-2" target="_self">Evento 3.1</a></li>
-										<li><a href="#" title="Agenda 3-3" target="_self">Evento 3.1</a></li>
-									</ul>						
-								</li>
-							</ul>
-						</li>
-						<!-- Opción Talleres -->
+						<li><a href="{!!URL::to('/pagos-s')!!}">PAGOS</a></li>
+						<!-- Opción Actividades -->
 						<li><a href="#">TALLERES<span class="despliegue">▼</span></a>
 							<ul>
-								<li><a href="#" title="ir a cursos" target="_self">TALLERES<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="futbol" title="ir a futbol" target="_self">Futbol</a></li>
-										<li><a href="#" title="Actividad 1.2" target="_self">Actividad 1.2</a></li>
-										<li><a href="#" title="Actividad 1.3" target="_self">Actividad 1.3</a></li>
-									</ul>
-								</li>
-								<li><a href="#" title="Actividad 2" target="_self">Actividad 2<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Actividad 2.1" target="_self">Actividad 2.1</a></li>
-										<li><a href="#" title="Actividad 2.2" target="_self">Actividad 2.2</a></li>
-										<li><a href="#" title="Actividad 2.3" target="_self">Actividad 2.3</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="Actividad 3" target="_self">Actividad 3<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Actividad 3.1" target="_self">Actividad 3.1</a></li>
-										<li><a href="#" title="Actividad 3.2" target="_self">Actividad 3.2</a></li>
-										<li><a href="#" title="Actividad 3.3" target="_self">Actividad 3.3</a></li>
-									</ul>						
-								</li>
+								<li><a href="{!!URL::to('/talleres-s')!!}" title="consultar talleres" target="_self">CONSULTAR</a></li>
+								<li><a href="{!!URL::to('/futbol-s')!!}" title="inscripciones de talleres" target="_self">INCRIPCIONES</a></li>
 							</ul>					
 						</li>
-						<!-- Opción Trámites -->
-						<li><a href="#">TRÁMITES<span class="despliegue">▼</span></a>
-							<ul>
-								<li><a href="#" title="Tramite 1" target="_self">Evento 1<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Tramite 1-1" target="_self">Evento 1.1</a></li>
-										<li><a href="#" title="Tramite 1-2" target="_self">Evento 1.2</a></li>
-										<li><a href="#" title="Tramite 1-3" target="_self">Evento 1.3</a></li>
-									</ul>
-								</li>
-								<li><a href="#" title="Tramite 2" target="_self">Evento 2<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Tramite 2-1" target="_self">Evento 2.1</a></li>
-										<li><a href="#" title="Tramite 2-2" target="_self">Evento 2.2</a></li>
-										<li><a href="#" title="Tramite 2-3" target="_self">Evento 2.3</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="Tramite 3" target="_self">Evento 3<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="Tramite 3-1" target="_self">Evento 3.1</a></li>
-										<li><a href="#" title="Tramite 3-2" target="_self">Evento 3.1</a></li>
-										<li><a href="#" title="Tramite 3-3" target="_self">Evento 3.1</a></li>
-									</ul>						
-								</li>
-							</ul>
-						</li>
-						<!-- Opción Login -->
-						<li><a href="login">LOGIN/LOG-OUT <span class="glyphicon glyphicon-user"></span> </a></li>
-					</ul>
-				</nav>
-		    	<!--menu de opciones debajo de la superior-->
-				<nav class="menu" id="menu-2">
-					<ul>
-						<li><a href="cuenta-al-socio">CUENTA</a>
-						</li>
-						<!-- Sedes -->
-						<li><a href="#">PAGO<span class="despliegue">▼</span></a>
-							<ul>
-								<li><a href="#" title="ir a curso 1" target="_self">CURSO 2<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir a ver curso 1" target="_self">VER CURSO</a></li>
-										<li><a href="#" title="ir a inscribirse 1" target="_self">INSCRIBIRSE</a></li>
-									</ul>
-								</li>
-								<li><a href="#" title="ir a curso 2" target="_self">CURSO 1<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir a ver curso 2" target="_self">VER CURSO</a></li>
-										<li><a href="#" title="ir a inscribirse 2" target="_self">INSCRIBIRSE</a></li>
-									</ul>						
-								</li>
-							</ul>
-						</li>
-						<!-- Opción Actividades -->
-						<li><a href="#">TALLER<span class="despliegue">▼</span></a>
-							<ul>
-								<li><a href="#" title="ir a ambientes" target="_self">AMBIENTES<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir a ver curso" target="_self">VER</a></li>
-										<li><a href="#" title="ir a reservar ambiente" target="_self">RESERVAR</a></li>
-										<li><a href="anular-reserva-ambiente-al" title="ir a anular ambiente" target="_self">ANULAR</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="ir a cursos" target="_self">CURSOS<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir a ver curso" target="_self">VER</a></li>
-										<li><a href="#" title="ir a inscribirse en curso" target="_self">INSCRIBIRSE</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="ir a talleres" target="_self">TALLERES<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir a ver taller" target="_self">VER</a></li>
-										<li><a href="#" title="ir a inscribirse en taller" target="_self">INSCRIBIRSE</a></li>
-									</ul>
-								</li>
-								<li><a href="#" title="ir a eventos" target="_self">EVENTOS<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir a ver evento" target="_self">VER</a></li>
-										<li><a href="#" title="ir a inscribirse en evento" target="_self">INSCRIBIRSE</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="ir a actividades" target="_self">ACTIVIDADES<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir a ver actividad" target="_self">VER</a></li>
-										<li><a href="#" title="ir a inscribirse en actividad" target="_self">INSCRIBIRSE</a></li>
-									</ul>						
-								</li>
-							</ul>					
+						<li><a href="#">TRÁMITES</a>
 						</li>
 						<!-- Opción Eventos -->
-						<li><a href="#">ACTIVIDAD<span class="despliegue">▼</span></a>
+						<li><a href="#">ACTIVIDADES<span class="despliegue">▼</span></a>
 							<ul>
-								<li><a href="#" title="Evento 1" target="_self">VER DETALLES<span class="despliegue">▼</span></a>
-									<ul>
-										<!-- <li><a href="#" title="Evento 1-1" target="_self">Evento 1.1</a></li> -->
-										<!-- <li><a href="#" title="Evento 1-2" target="_self">Evento 1.2</a></li> -->
-									</ul>
-								</li>
+								<li><a href="#" title="consultar actividades" target="_self">CONSULTAR</a></li>
+								<li><a href="#" title="inscripciones de actividades" target="_self">INCRIPCIONES</a></li>
 							</ul>
 						</li>
 						<!-- Opción TRAMITES -->
-						<li><a href="#">AMBIENTE<span class="despliegue">▼</span></a>
+						<li><a href="#">AMBIENTES<span class="despliegue">▼</span></a>
 							<ul>
-								<li><a href="#" title="ir_tramites" target="_self">VER TRÁMITES<span class="despliegue">▼</span></a>
-									<ul>
-										<!-- <li><a href="#" title="Evento 1-1" target="_self">Evento 1.1</a></li> -->
-										<!-- <li><a href="#" title="Evento 1-2" target="_self">Evento 1.2</a></li> -->
-										<!-- <li><a href="#" title="Evento 1-3" target="_self">Evento 1.3</a></li> -->
-									</ul>
-								</li>
+								<li><a href="{!!URL::to('/ambientes-s')!!}" title="consultar ambientes" target="_self">CONSULTAR</a></li>
+								<li><a href="#" title="reserva de ambientes" target="_self">RESERVAR</a></li>
+								<li><a href="{!!URL::to('/anular-reserva-ambiente-s')!!}" title="anular ambientes" target="_self">ANULAR</a></li>
 							</ul>
 						</li>
 						<!-- Opción MANTENIMIENTO -->
-						<li><a href="#">BUNGALOW<span class="despliegue">▼</span></a>
+						<li><a href="#">BUNGALOWS<span class="despliegue">▼</span></a>
 							<ul>
-								<li><a href="#" title="ir_socio" target="_self">SOCIO<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="consultar-info-socio-al" title="ir a consultar socio" target="_self">CONSULTAR SOCIO</a></li>
-										<li><a href="#" title="ir a registrar nuevo socio" target="_self">REGISTRAR NUEVO SOCIO
-										</a></li>
-										<li><a href="#" title="ir a modificar socio" target="_self">MODIFICAR SOCIO</a></li>
-										<li><a href="#" title="ir a registrar multa" target="_self">REGISTRAR MULTA</a></li>
-									</ul>
-								</li>
-								<li><a href="#" title="ir_postulante" target="_self">POSTULANTE<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="registrar-solicitud-postulante-al" title="ir_registrar_postulante" target="_self">REGISTRAR POSTULANTE</a></li>
-										<li><a href="#" title="ir_modificar_postulante" target="_self">MODIFICAR POSTULANTE</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="ir_ambiente" target="_self">AMBIENTE<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="registrar-ambiente-al" title="ir_registrar_ambiente" target="_self">REGISTRAR AMBIENTE</a></li>
-										<li><a href="modificar-ambiente-al" title="ir_modificar_ambiente" target="_self">MODIFICAR AMBIENTE</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="ir_perfil" target="_self">PERFIL<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir_registrar_perfil" target="_self">REGISTRAR PERFIL</a></li>
-										<li><a href="#" title="ir_modificar_perfil" target="_self">MODIFICAR PERFIL</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="ir_promocion" target="_self">PROMOCIÓN<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir_registrar_promocion" target="_self">REGISTRAR PROMOCIÓN</a></li>
-										<li><a href="#" title="ir_modificar_promoción" target="_self">MODIFICAR PROMOCIÓN</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="ir_producto" target="_self">PRODUCTO<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="registrar-nuevo-producto-al" title="ir_registrar_producto" target="_self">REGISTRAR PRODUCTO</a></li>
-										<li><a href="#" title="ir_modificar_producto" target="_self">MODIFICAR PRODUCTO</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="ir_sede" target="_self">SEDE<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir_registrar_sede" target="_self">REGISTRAR SEDE</a></li>
-										<li><a href="#" title="ir_modificar_sede" target="_self">MODIFICAR SEDE</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="ir_servicios" target="_self">SERVICIOS<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir_registrar_servicio" target="_self">REGISTRAR SERVICIO</a></li>
-										<li><a href="#" title="ir_modificar_servicio" target="_self">MODIFICAR SERVICIO</a></li>
-										<li><a href="registrar-concesionaria-al" title="ir_registrar_concesionaria" target="_self">REGISTRAR CONCESIONARIA</a></li>
-										<li><a href="#" title="ir_modificar_concesionaria" target="_self">MODIFICAR CONCESIONARIA</a></li>
-									</ul>						
-								</li>
-								<li><a href="#" title="ir_tarifario" target="_self">TARIFARIO<span class="despliegue">▼</span></a>
-									<ul>
-										<li><a href="#" title="ir_registrar_nueva_tarifa" target="_self">REGISTRAR NUEVA TARIFA + CATEGORIA</a></li>
-										<li><a href="#" title="ir_modificar_tarifa_membresia" target="_self">MODIFICAR TARIFA MEMBRESIA</a></li>
-										<li><a href="#" title="ir_modificar_tarifa_bungalow" target="_self">MODIFICAR TARIFA BUNGALOW</a></li>
-										<li><a href="#" title="ir_modificar_tarifa_curso" target="_self">MODIFICAR TARIFA CURSO</a></li>
-										<li><a href="#" title="ir_modificar_tarifa_ambiente" target="_self">MODIFICAR TARIFA AMBIENTE</a></li>
-										<li><a href="#" title="ir_modificar_tarifa_actividades" target="_self">MODIFICAR TARIFA ACTIVIDADES</a></li>
-									</ul>						
-								</li>
+								<li><a href="{!!URL::to('/bungalows-s')!!}" title="consultar Bungalows" target="_self">CONSULTAR</a></li>
+								<li><a href="{!!URL::to('/reserva-bungalows-s')!!}" title="reserva de bungalows" target="_self">RESERVAR</a></li>
 							</ul>
 						</li>
 					</ul>
