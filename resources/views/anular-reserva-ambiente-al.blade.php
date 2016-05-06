@@ -91,8 +91,6 @@
 	<!-- Bootstrap -->
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<!-- BXSlider -->
-	<script type="text/javascript" src="js/jquery.validate.js"></script>
-	
 	<script src="js/jquery.bxslider.min.js"></script>
 	<!-- Mis Scripts -->
 	<script src="js/MisScripts.js"></script>
