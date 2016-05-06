@@ -46,7 +46,7 @@ class LogController extends Controller
     public function store(LoginRequest $request)
     {
         if(Auth::attempt(['email'=>$request['email'], 'password'=>$request['password'], 'type'=>$request['type']])){
-            if ($request['type']=="socio")
+            /*if ($request['type']=="socio")
                 return Redirect::to('/socio');
             if($request['type']=="gerente")
                 return Redirect::to('/gerente');
@@ -55,11 +55,11 @@ class LogController extends Controller
             if($request['type']=="admin-p")
                 return Redirect::to('/admin-pagos');
             if($request['type']=="admin-g")
-                return Redirect::to('/admin-general');
+                return Redirect::to('/admin-general');*/
 
         }
         Session::flash('message-error','Datos son incorrectos');
-        return Redirect::to('/login');
+        return Redirect::to('/admin-registros');
 
     }
 

@@ -25,7 +25,7 @@
 				<!--Opciones de menu-->
 				<nav class="menu" id="menu">
 					<ul>
-						<li><a href="#">{!!Auth::user()->name!!}  <span class="glyphicon glyphicon-user"></span></a>
+						<li><a href="#">  <span class="glyphicon glyphicon-user"></span></a>
 									<ul>
 										<li><a href="{!!URL::to('/cuenta')!!}" title="ir a ver curso 1" target="_self">CUENTA</a></li>
 										<li><a href="{!!URL::to('/logout')!!}" title="LOGOUT" target="_self">LOGOUT</a></li>
