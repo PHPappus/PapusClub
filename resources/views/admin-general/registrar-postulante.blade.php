@@ -258,6 +258,11 @@
 										</div>	
 									</div>
 								</div>
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<button id="btn-savechanges1" class="btn btn-lg btn-primary" onclick="guardar_cambios_cuenta()" >Guardar Cambios</button>	
+									</div>
+								</div>								
 							</form>
 							<form action="" class="form-horizontal form-border">
 								<br/>
