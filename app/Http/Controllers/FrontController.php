@@ -11,14 +11,13 @@ class FrontController extends Controller
 	public function index() {
 		return view('inicio');
 	}
-    /*public function login() {
+
+    public function login() {
     	return view('login');
     }
+    
     public function futbol() {
     	return view('futbol');
-    }
-    public function cultural(){
-        return view('cultural');    
     }
     public function historia_papusclub() {
     	return view('historia-papusclub');
@@ -38,15 +37,6 @@ class FrontController extends Controller
     public function reserva_bungalow_busqueda(){
     	return view('reserva-bungalow-busqueda');
     }
-    public function inicio_after_login(){
-        return view('inicio-after-login');
-    }
-    public function registrar_ambiente_al(){
-        return view('registrar-ambiente-al');
-    }
-    public function modificar_ambiente_al(){
-        return view('modificar-ambiente-al');
-    }
     public function registrar_concesionaria_al(){
         return view('registrar-concesionaria-al');
     }
@@ -62,18 +52,8 @@ class FrontController extends Controller
     public function registrar_precio_pref_bungalows_1_al(){
         return view('registrar-precio-pref-bungalows-1-al');
     }
-
     public function registrar_precio_especial_membresia_1_al(){
         return view('registrar-precio-especial-membresia-1-al');
     }
-   
-
-    public function registrar_postulante(){
-        return view('registrar-postulante');
-    }
-    public function modificar_postulante(){
-        return view('modificar-postulante');
-    }
- */
-
+    
 }
