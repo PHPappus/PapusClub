@@ -20,11 +20,17 @@ Route::get('/{nombre}', function ($nombre) {
 });
 
 
+Route::get('sedes/index', 'SedesController@index');
+Route::get('sedes/new', 'SedesController@create');
+Route::post('sedes/new/sede', 'SedesController@store');
+Route::get('sedes/{id}', 'SedesController@edit');
+Route::post('sedes/{id}/edit', 'SedesController@update');
+Route::get('sedes/{id}/delete', 'SedesController@destroy');
+
 /*
 Route::get('/', 'FrontController@index');
 Route::get('login', 'FrontController@login');
 Route::get('futbol', 'FrontController@futbol');
-Route::get('cultural','FrontController@cultural');
 Route::get('historia-papusclub', 'FrontController@historia_papusclub');
 Route::get('historia-papusclub-ver-mas', 'FrontController@historia_papusclub_ver_mas');
 Route::get('historia-sede-callao', 'FrontController@historia_sede_callao');
@@ -40,6 +46,4 @@ Route::get('registrar-nuevo-producto-al','FrontController@registrar_nuevo_produc
 Route::get('registrar-precio-especial-membresia-al','FrontController@registrar_precio_especial_membresia_al');
 Route::get('registrar-precio-pref-bungalows-1-al','FrontController@registrar_precio_pref_bungalows_1_al');
 Route::get('registrar-precio-especial-membresia-1-al','FrontController@registrar_precio_especial_membresia_1_al');
-Route::get('registrar-postulante','FrontController@registrar_postulante');
-Route::get('modificar-postulante','FrontController@modificar_postulante');
 */

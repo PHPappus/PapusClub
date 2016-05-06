@@ -17,9 +17,6 @@ class FrontController extends Controller
     public function futbol() {
     	return view('futbol');
     }
-    public function cultural(){
-        return view('cultural');    
-    }
     public function historia_papusclub() {
     	return view('historia-papusclub');
     }
@@ -62,18 +59,8 @@ class FrontController extends Controller
     public function registrar_precio_pref_bungalows_1_al(){
         return view('registrar-precio-pref-bungalows-1-al');
     }
-
     public function registrar_precio_especial_membresia_1_al(){
         return view('registrar-precio-especial-membresia-1-al');
     }
-   
-
-    public function registrar_postulante(){
-        return view('registrar-postulante');
-    }
-    public function modificar_postulante(){
-        return view('modificar-postulante');
-    }
- */
-
+    */
 }
