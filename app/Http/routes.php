@@ -76,3 +76,7 @@ Route::get('registrar-nuevo-producto-al','FrontController@registrar_nuevo_produc
 Route::get('registrar-precio-especial-membresia-al','FrontController@registrar_precio_especial_membresia_al');
 Route::get('registrar-precio-pref-bungalows-1-al','FrontController@registrar_precio_pref_bungalows_1_al');
 Route::get('registrar-precio-especial-membresia-1-al','FrontController@registrar_precio_especial_membresia_1_al');
+
+
+//Validacion de Campos
+
