@@ -57,6 +57,7 @@ Route::resource('admin-pagos','AdminPagosController');
 
 //Administrador general
 Route::resource('admin-general','AdminGeneralController');
+Route::resource('registar-postulante','AdminGeneralController@registrarPostulante');
 
 
 

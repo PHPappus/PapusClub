@@ -39,7 +39,7 @@
 								<li><a href="#" title="ir a postulante" target="_self">POSTULANTE</a>
 									<ul>
 										<li><a href="#" title="ir a consultar" target="_self">CONSULTAR POSTULANTE</a></li>
-										<li><a href="#" title="ir a registrar" target="_self">REGISTRAR POSTULANTE</a></li>
+										<li><a href="{!!URL::to('/registar-postulante')!!}" title="ir a registrar" target="_self">REGISTRAR POSTULANTE</a></li>
 									</ul>
 								</li>
 							</ul>

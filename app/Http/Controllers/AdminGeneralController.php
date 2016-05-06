@@ -18,6 +18,11 @@ class adminGeneralController extends Controller
         return view('admin-general.inicio-al-admin');
     }
 
+    public function registrarPostulante()
+    {
+        return view('admin-general.registrar-postulante');
+    }   
+
     /**
      * Show the form for creating a new resource.
      *
