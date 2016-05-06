@@ -41,7 +41,7 @@
 					</div>
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="seccion1">
-							<form action="" class="form-horizontal form-border">
+							<form id ="datos-basicos" action="" class="form-horizontal form-border">
 								<br/><br/>
 								<div class="form-group">
 									<div class="col-sm-6">
@@ -113,6 +113,7 @@
 										</div>	
 									</div>
 								</div>
+								<button type="submit" class="ui primary button">Sign up</button>
 							</form>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="seccion2">
@@ -633,10 +634,40 @@
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<!-- Bootstrap -->
 	<script type="text/javascript" src="js/bootstrap.js"></script>
+
+	<script type="text/javascript" src="jquery.validate.js"></script>
 	<!-- BXSlider -->
 	<script src="js/jquery.bxslider.min.js"></script>
 	<!-- Mis Scripts -->
 	<script src="js/MisScripts.js"></script>
+
+	<script>
+
+		$.validator.setDefaults( {
+			submitHandler: function () {
+				alert( "submitted!" );
+			}
+		} );
+
+		$( document ).ready( function () {
+			$( "#datos-basicos" ).validate( {
+				rules: {
+					nombre: "required",
+					apellido: "required"
+				},
+				messages: {
+					firstname: "Please enter your firstname",
+					lastname: "Please enter your lastname",
+				}
+			});
+		});
+
+
+
+
+
+
+	</script>
 
 </body>
 </html>
