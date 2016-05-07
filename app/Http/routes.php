@@ -13,12 +13,11 @@
 
 /*Route::get('/', function () {
     return view('welcome');
-});*/
-Route::get('/', 'FrontController@index');
-Route::get('/{nombre}', function ($nombre) {
-     return view($nombre);
 });
+*/
+Route::get('/', 'ProveedorController@index');
 
+Route::get('/modificar-proveedor-al','ProveedorController@getRegistrarProveedor');
 
 Route::get('sedes/index', 'SedesController@index');
 Route::get('sedes/new', 'SedesController@create');
@@ -26,6 +25,14 @@ Route::post('sedes/new/sede', 'SedesController@store');
 Route::get('sedes/{id}', 'SedesController@edit');
 Route::post('sedes/{id}/edit', 'SedesController@update');
 Route::get('sedes/{id}/delete', 'SedesController@destroy');
+
+Route::get('registrar-proveedor-al', 'ProveedorController@Create');
+Route::post('registrar-proveedor-al/nuevo', 'ProveedorController@InsertProveedor');
+//Route::get('/modificar-proveedor-0-al','ProveedorController@confirmar_registro_ambiente');
+
+Route::get('/{nombre}', function ($nombre) {
+     return view($nombre);
+});
 
 /*
 Route::get('/', 'FrontController@index');
