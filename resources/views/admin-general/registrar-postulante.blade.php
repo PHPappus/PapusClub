@@ -46,7 +46,6 @@
 							<li role="presentation"><a href="#seccion3" aria-controls="seccion3" data-toggle="tab" role="tab">Educación/Trabajo</a></li>
 							<li role="presentation"><a href="#seccion4" aria-controls="seccion4" data-toggle="tab" role="tab">Familiares</a></li>
 							<li role="presentation"><a href="#seccion5" aria-controls="seccion5" data-toggle="tab" role="tab">Invitados</a></li>
-							<li role="presentation"><a href="#seccion6" aria-controls="seccion6" data-toggle="tab" role="tab">Membresia</a></li>
 						</ul>
 					</div>
 					<div class="tab-content">
@@ -59,7 +58,7 @@
 											<label for="" class="control-label">Nombre:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="nombre" placeholder="" style="max-width: 250px" >
+											<input type="text" class="form-control" name="nombre" id="nombre" placeholder="" style="max-width: 250px" >
 										</div>	
 									</div>
 								</div>
@@ -69,7 +68,7 @@
 											<label for="" class="control-label">Apellidos:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="apellidos" placeholder="" style="max-width: 250px" >
+											<input type="text" class="form-control" name="apellido" id="apellidos" placeholder="" style="max-width: 250px" >
 										</div>	
 									</div>
 								</div>
@@ -79,7 +78,7 @@
 											<label for="" class="control-label">Tipo de Documento:</label>
 										</div>
 										<div class="col-sm-6">
-											<select id="typedoc" class="form-control inputmodify" name="sede" style="max-width: 250px " >
+											<select id="typedoc" class="form-control inputmodify" name="tipoDoc" style="max-width: 250px " >
 								                <option value="dni" default>LIBRETA ELECTORAL O DNI</option>
 												<option value="Casado">CARNET DE EXTRANJERIA</option>
 					    					</select>
@@ -92,7 +91,7 @@
 											<label for="" class="control-label">Documento de identidad:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control inputmodify" id="docidentity" placeholder="#######" style="max-width: 250px">
+											<input type="text" class="form-control inputmodify" name="docId" id="docidentity" placeholder="#######" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -102,7 +101,7 @@
 											<label for="" class="control-label">Fecha de Nacimiento:</label>
 										</div>
 										<div class="col-sm-6">
-											<input class="form-control datepicker"  placeholder="MM/DD/YYYY" value="06/02/1990" type="text" id="dpd1">
+											<input class="form-control datepicker"  name="fechaNac" placeholder="MM/DD/YYYY" value="06/02/1990" type="text" id="dpd1">
 										</div>		
 									</div>
 								</div>
@@ -112,7 +111,7 @@
 											<label for="" class="control-label">Estado Civil:</label>
 										</div>
 										<div class="col-sm-6">
-											<select class="form-control inputmodify" name="sede" style="max-width: 250px " >
+											<select class="form-control inputmodify" name="estadoCiv" style="max-width: 250px " >
 								                <option value="Soltero" default>Soltero (a)</option>
 												<option value="Casado">Casado (a)</option>
 												<option value="Divorciado">Divorciado (a)</option>
@@ -123,6 +122,11 @@
 										</div>	
 									</div>
 								</div>
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<button id="btn-savechanges1" class="btn btn-lg btn-primary" onclick="guardar_cambios_cuenta()" >Guardar Cambios</button>	
+									</div>
+								</div>								
 							</form>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="seccion2">
@@ -134,7 +138,7 @@
 											<label for="" class="control-label">Lugar de Nacimiento:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="lugarnac" placeholder="LIMA" style="max-width: 250px" >
+											<input type="text" class="form-control" name="lugarNac" id="lugarnac" placeholder="LIMA" style="max-width: 250px" >
 										</div>		
 									</div>
 									<div class="col-sm-6">
@@ -142,7 +146,7 @@
 											<label for="" class="control-label">Nacionalidad:</label>
 										</div>
 										<div class="col-sm-6">
-											<select class="form-control" name="sede" style="max-width: 250px ">
+											<select class="form-control" name="nacionalidad" style="max-width: 250px ">
 								                <!-- <option value=""> --- </option> -->
 								                <option value="Argentina" default> Perú </option>
 								                <option value="Argentina"> Argentina </option>
@@ -161,7 +165,7 @@
 											<label for="" class="control-label">Dirección:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="address" placeholder="Mz Lt Calle Urb. Distrito" style="max-width: 250px">
+											<input type="text" class="form-control" name="direccion" id="address" placeholder="Mz Lt Calle Urb. Distrito" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -171,7 +175,7 @@
 											<label for="" class="control-label">Teléfono:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="telef" placeholder="Last name" style="max-width: 250px">
+											<input type="text" class="form-control" name="telefono" id="telef" placeholder="Last name" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -181,7 +185,7 @@
 											<label for="" class="control-label">Celular:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="cellphone" placeholder="#######" style="max-width: 250px">
+											<input type="text" class="form-control" name="celular" id="cellphone" placeholder="#######" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -191,7 +195,7 @@
 											<label for="" class="control-label">Correo:</label>
 										</div>
 										<div class="col-sm-6">
-											<select class="form-control" name="sede" style="max-width: 250px " >
+											<select class="form-control" name="correo" style="max-width: 250px " >
 												<option value="" default> --- </option>
 								                <option value="dni">LIBRETA ELECTORAL O DNI</option>
 												<option value="carnet-extranjeria">CARNET DE EXTRANJERIA</option>
@@ -199,6 +203,11 @@
 										</div>	
 									</div>
 								</div>
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<button id="btn-savechanges1" class="btn btn-lg btn-primary" onclick="guardar_cambios_cuenta()" >Guardar Cambios</button>	
+									</div>
+								</div>								
 							</form>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="seccion3">
@@ -218,7 +227,7 @@
 											<label for="" class="control-label">Nivel de instrucción:</label>
 										</div>
 										<div class="col-sm-6">
-											<select class="form-control" name="nivel" style="max-width: 250px " >
+											<select class="form-control" name="nivelIns" style="max-width: 250px " >
 												<option value="" default> --- </option>
 								                <option value="superiores">Superiores</option>
 												<option value="mediossup">Medios-Superiores</option>
@@ -235,7 +244,7 @@
 											<label for="" class="control-label">Colegio Secundaria:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="colegio" placeholder="colegio" style="max-width: 250px">
+											<input type="text" class="form-control" name="colegio" id="colegio" placeholder="colegio" style="max-width: 250px">
 										</div>		
 									</div>
 								</div>
@@ -245,10 +254,15 @@
 											<label for="" class="control-label">Carrera:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="carrera" placeholder="carrera" style="max-width: 250px">
+											<input type="text" class="form-control" name="carrera" id="carrera" placeholder="carrera" style="max-width: 250px">
 										</div>	
-									</div>
+									</div>   
 								</div>
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<button id="btn-savechanges1" class="btn btn-lg btn-primary" onclick="guardar_cambios_cuenta()" >Guardar Cambios</button>	
+									</div>
+								</div>								
 							</form>
 							<form action="" class="form-horizontal form-border">
 								<br/>
@@ -266,7 +280,7 @@
 											<label for="" class="control-label">Centro de Trabajo:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="ctrabajo" placeholder="" style="max-width: 250px">
+											<input type="text" class="form-control" name="centroTrabajo" id="ctrabajo" placeholder="" style="max-width: 250px">
 										</div>		
 									</div>
 								</div>
@@ -276,7 +290,7 @@
 											<label for="" class="control-label">Dirección:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="direccion" placeholder="AV Nro" style="max-width: 250px">
+											<input type="text" class="form-control" name="dirTrab" id="direccion" placeholder="AV Nro" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -286,7 +300,7 @@
 											<label for="" class="control-label">Teléfono:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="telefono" placeholder="telefono" style="max-width: 250px">
+											<input type="text" class="form-control" name="telfTrab" id="telefono" placeholder="telefono" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -296,10 +310,15 @@
 											<label for="" class="control-label">Cargo en Empresa:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="especialidad" placeholder="cargo" style="max-width: 250px">
+											<input type="text" class="form-control" name="cargo" id="especialidad" placeholder="cargo" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<button id="btn-savechanges1" class="btn btn-lg btn-primary" onclick="guardar_cambios_cuenta()" >Guardar Cambios</button>	
+									</div>
+								</div>								
 							</form>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="seccion4">
@@ -315,28 +334,10 @@
 								<div class="form-group">
 									<div class="col-sm-6">
 										<div class="col-sm-6 text-left">
-											<label for="" class="control-label">Nro:</label>
-										</div>
-										<div class="col-sm-6">
-											<input type="text" class="form-control" id="nro" placeholder="#####" style="max-width: 250px" >
-										</div>		
-									</div>
-									<div class="col-sm-6">
-										<div class="col-sm-6 text-left">
-											<label for="" class="control-label">Fecha de Registro:</label>
-										</div>
-										<div class="col-sm-6">
-											<input class="form-control datepicker"  placeholder="MM/DD/YYYY" value="05/02/2016" type="text" id="fechaR1" >
-										</div>		
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-6">
-										<div class="col-sm-6 text-left">
 											<label for="" class="control-label">Nombre:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="nombre" placeholder="Name" style="max-width: 250px">
+											<input type="text" class="form-control" name="nombCon" id="nombre" placeholder="Name" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -346,30 +347,37 @@
 											<label for="" class="control-label">Apellidos:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="apellidos" placeholder="Last name" style="max-width: 250px">
+											<input type="text" class="form-control" name="apCon" id="apellidos" placeholder="Last name" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
+								<!---->
 								<div class="form-group">
 									<div class="col-sm-6">
 										<div class="col-sm-6 text-left">
 											<label for="" class="control-label">Tipo de Documento:</label>
 										</div>
 										<div class="col-sm-6">
-											<select class="form-control" name="sede" style="max-width: 250px " >
+											<select class="form-control" name="tDocCon" style="max-width: 250px " >
 								                <option value="dni" default>LIBRETA ELECTORAL O DNI</option>
 												<option value="Casado">CARNET DE EXTRANJERIA</option>
 					    					</select>
 										</div>	
+									</div>								
+									<div class="col-sm-6">
+										<div class="col-sm-12 text-center">
+											<button id="btn-savechanges1" class="btn btn-lg btn-primary" onclick="guardar_cambios_cuenta()" >Guardar Cambios</button>	
+										</div>		
 									</div>
-								</div>
+								</div>	
+								<!---->							
 								<div class="form-group">
 									<div class="col-sm-6">
 										<div class="col-sm-6 text-left">
 											<label for="" class="control-label">Documento de identidad:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="docidentity" placeholder="#######" style="max-width: 250px">
+											<input type="text" name="docCon" class="form-control" id="docidentity" placeholder="#######" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -379,7 +387,7 @@
 											<label for="" class="control-label">Fecha de Nacimiento:</label>
 										</div>
 										<div class="col-sm-6">
-											<input class="form-control datepicker"  placeholder="MM/DD/YYYY" value="05/02/1993" type="text" id="fechaN1" >
+											<input class="form-control datepicker"  name="fechaNacCon" placeholder="MM/DD/YYYY" value="05/02/1993" type="text" id="fechaN1" >
 										</div>		
 									</div>
 								</div>
@@ -389,7 +397,7 @@
 											<label for="" class="control-label">Estado Civil:</label>
 										</div>
 										<div class="col-sm-6">
-											<select class="form-control" name="sede" style="max-width: 250px " >
+											<select class="form-control" name="estCivCon" style="max-width: 250px " >
 								                <option value="Soltero" default>Soltero (a)</option>
 												<option value="Casado">Casado (a)</option>
 												<option value="Divorciado">Divorciado (a)</option>
@@ -409,32 +417,14 @@
 											<p class="lead"><strong>Padre</strong></p>
 										</div>
 									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-6">
-										<div class="col-sm-6 text-left">
-											<label for="" class="control-label">Nro:</label>
-										</div>
-										<div class="col-sm-6">
-											<input type="text" class="form-control" id="nro" placeholder="#####" style="max-width: 250px" >
-										</div>		
-									</div>
-									<div class="col-sm-6">
-										<div class="col-sm-6 text-left">
-											<label for="" class="control-label">Fecha de Registro:</label>
-										</div>
-										<div class="col-sm-6">
-											<input class="form-control datepicker"  placeholder="MM/DD/YYYY" value="05/02/2016" type="text" id="fechaR2" >
-										</div>		
-									</div>
-								</div>
+								</div>								
 								<div class="form-group">
 									<div class="col-sm-6">
 										<div class="col-sm-6 text-left">
 											<label for="" class="control-label">Nombre:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="nombre" placeholder="Name" style="max-width: 250px">
+											<input type="text" class="form-control" name="nombP" id="nombre" placeholder="Name" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -444,7 +434,7 @@
 											<label for="" class="control-label">Apellidos:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="apellidos" placeholder="Last name" style="max-width: 250px">
+											<input type="text" class="form-control" name="apP" id="apellidos" placeholder="Last name" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -454,20 +444,25 @@
 											<label for="" class="control-label">Tipo de Documento:</label>
 										</div>
 										<div class="col-sm-6">
-											<select class="form-control" name="sede" style="max-width: 250px " >
+											<select class="form-control" name="tDocP" style="max-width: 250px " >
 								                <option value="dni" default>LIBRETA ELECTORAL O DNI</option>
 												<option value="Casado">CARNET DE EXTRANJERIA</option>
 					    					</select>
 										</div>	
+									</div>								
+									<div class="col-sm-6">
+										<div class="col-sm-12 text-center">
+											<button id="btn-savechanges1" class="btn btn-lg btn-primary" onclick="guardar_cambios_cuenta()" >Guardar Cambios</button>	
+										</div>		
 									</div>
-								</div>
+								</div>	
 								<div class="form-group">
 									<div class="col-sm-6">
 										<div class="col-sm-6 text-left">
 											<label for="" class="control-label">Documento de identidad:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="docidentity" placeholder="#######" style="max-width: 250px">
+											<input type="text" class="form-control" name="docP" id="docidentity" placeholder="#######" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -477,7 +472,7 @@
 											<label for="" class="control-label">Fecha de Nacimiento:</label>
 										</div>
 										<div class="col-sm-6">
-											<input class="form-control datepicker"  placeholder="MM/DD/YYYY" value="05/02/1993" type="text" id="fechaN2" >
+											<input class="form-control datepicker" name="fechaNacP" placeholder="MM/DD/YYYY" value="05/02/1993" type="text" id="fechaN2" >
 										</div>		
 									</div>
 								</div>
@@ -487,7 +482,7 @@
 											<label for="" class="control-label">Estado Civil:</label>
 										</div>
 										<div class="col-sm-6">
-											<select class="form-control" name="sede" style="max-width: 250px " >
+											<select class="form-control" name="estCivP" style="max-width: 250px " >
 								                <option value="Soltero" default>Soltero (a)</option>
 												<option value="Casado">Casado (a)</option>
 												<option value="Divorciado">Divorciado (a)</option>
@@ -511,28 +506,10 @@
 								<div class="form-group">
 									<div class="col-sm-6">
 										<div class="col-sm-6 text-left">
-											<label for="" class="control-label">Nro:</label>
-										</div>
-										<div class="col-sm-6">
-											<input type="text" class="form-control" id="nro" placeholder="#####" style="max-width: 250px" >
-										</div>		
-									</div>
-									<div class="col-sm-6">
-										<div class="col-sm-6 text-left">
-											<label for="" class="control-label">Fecha de Registro:</label>
-										</div>
-										<div class="col-sm-6">
-											<input class="form-control datepicker"  placeholder="MM/DD/YYYY" value="05/02/2016" type="text" id="fechaR3" >
-										</div>		
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-6">
-										<div class="col-sm-6 text-left">
 											<label for="" class="control-label">Nombre:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="nombre" placeholder="Name" style="max-width: 250px">
+											<input type="text" class="form-control" name="nombM" id="nombre" placeholder="Name" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -542,7 +519,7 @@
 											<label for="" class="control-label">Apellidos:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="apellidos" placeholder="Last name" style="max-width: 250px">
+											<input type="text" class="form-control" name="apM" id="apellidos" placeholder="Last name" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -552,21 +529,25 @@
 											<label for="" class="control-label">Tipo de Documento:</label>
 										</div>
 										<div class="col-sm-6">
-											<select class="form-control" name="sede" style="max-width: 250px " >
-												<option value="" default>---- </option>
-								                <option value="dni">LIBRETA ELECTORAL O DNI</option>
+											<select class="form-control" name="tDocM" style="max-width: 250px " >
+								                <option value="dni" default>LIBRETA ELECTORAL O DNI</option>
 												<option value="Casado">CARNET DE EXTRANJERIA</option>
 					    					</select>
 										</div>	
+									</div>								
+									<div class="col-sm-6">
+										<div class="col-sm-12 text-center">
+											<button id="btn-savechanges1" class="btn btn-lg btn-primary" onclick="guardar_cambios_cuenta()" >Guardar Cambios</button>	
+										</div>		
 									</div>
-								</div>
+								</div>	
 								<div class="form-group">
 									<div class="col-sm-6">
 										<div class="col-sm-6 text-left">
 											<label for="" class="control-label">Documento de identidad:</label>
 										</div>
 										<div class="col-sm-6">
-											<input type="text" class="form-control" id="docidentity" placeholder="#######" style="max-width: 250px">
+											<input type="text" class="form-control" name="docM" id="docidentity" placeholder="#######" style="max-width: 250px">
 										</div>	
 									</div>
 								</div>
@@ -576,7 +557,7 @@
 											<label for="" class="control-label">Fecha de Nacimiento:</label>
 										</div>
 										<div class="col-sm-6">
-											<input class="form-control datepicker"  placeholder="MM/DD/YYYY" value="05/02/1993" type="text" id="fechaN2" >
+											<input class="form-control datepicker"  name="fechaNacM" placeholder="MM/DD/YYYY" value="05/02/1993" type="text" id="fechaN2" >
 										</div>		
 									</div>
 								</div>
@@ -586,7 +567,7 @@
 											<label for="" class="control-label">Estado Civil:</label>
 										</div>
 										<div class="col-sm-6">
-											<select class="form-control" name="sede" style="max-width: 250px " >
+											<select class="form-control" name="estCivM" style="max-width: 250px " >
 								                <option value="Soltero" default>Soltero (a)</option>
 												<option value="Casado">Casado (a)</option>
 												<option value="Divorciado">Divorciado (a)</option>
@@ -607,86 +588,36 @@
 										</div>
 									</div>
 								</div>
-								<div class="table-responsive">
-										<table class="table table-bordered table-hover text-center">
-											<tr class="active">
-												<td>Nro</td>
-												<td>Documento</td>
-												<td>Nombre</td>
-												<td>Apellidos</td>
-												<td>Edad</td>
-											</tr>
-											<tr>
-												<td>562881</td>
-												<td>48288457</td>
-												<td>Juan</td>
-												<td>Perez Ramirez</td>
-												<td>16</td>
-											</tr>
-											<tr>
-												<td><input type="text"></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-											<tr>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-											<tr>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-											<tr>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-											<tr>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-											<tr>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-											<tr>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-											<tr>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-											<tr>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-										</table>
+								<div class="container">							
+									<div class="row">
+										<div class="col-sm-9">
+											<div class="table-responsive">
+												<table class="table table-bordered table-hover text-center">
+													<tr class="active">
+														<td>Nro</td>
+														<td>Documento</td>
+														<td>Nombre</td>
+														<td>Apellidos</td>
+														<td>Edad</td>
+														<td>Eliminar</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td><input type="checkbox"></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+										<div class="col-sm-3 text-left">
+											<button class="btn" onclick="agregar_fila_invitado()">Agregar Hijo</button>
+											</br></br>
+											<button class="btn" onclick="eliminiar_filas_invitados()">Eliminar Hijo Seleccionado</button>
+										</div>											
+									</div>
 								</div>
 							</form>
 						</div>
@@ -699,7 +630,7 @@
 											<p class="lead"><strong>Registro de Invitados</strong></p>
 										</div>
 										<div class="col-sm-4">
-												<p><em>Usted puede tener "x" invitados</em></p>		
+												<p><em>Usted puede tener "5" invitados</em></p>		
 										</div>
 									</div>
 								</div>
@@ -718,12 +649,12 @@
 															<td>Eliminar</td>
 														</tr>
 														<tr>
-															<td>DNI</td>
-															<td>48755121</td>
-															<td>Perez Ramirez</td>
-															<td>Juan</td>
-															<td>Viudo</td>
-															<td>jperez@papusclub.com</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
 															<td><input type="checkbox"></td>
 														</tr>
 														<tr>
@@ -774,88 +705,11 @@
 								</div>
 							</form>
 						</div>
-						<div role="tabpanel" class="tab-pane" id="seccion6">
-							<form action="" class="form-horizontal form-border">
-								<br/><br/>
-								<div class="container">
-									<div class="row">
-										<div class="col-sm-12 text-left">
-											<p class="lead"><strong>Cónyuge</strong></p>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-6">
-										<div class="col-sm-6 text-left">
-											<label for="" class="control-label">Nro:</label>
-										</div>
-										<div class="col-sm-6">
-											<input type="text" class="form-control" id="nro6" placeholder="#####" style="max-width: 250px" >
-										</div>		
-									</div>
-									<div class="col-sm-6">
-										<div class="col-sm-6 text-left">
-											<label for="" class="control-label">Última actualización:</label>
-										</div>
-										<div class="col-sm-6">
-											<input class="form-control datepicker"  placeholder="MM/DD/YYYY" value="05/02/2016" type="text" id="fechaR6-1" >
-										</div>		
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-6">
-										<div class="col-sm-6 text-left">
-											<label for="" class="control-label">Tipo de Socio:</label>
-										</div>
-										<div class="col-sm-6">
-											<select class="form-control" name="tiposocio" style="max-width: 250px " >
-								                <option value="ordinario" default>Ordinario</option>
-								                <option value="Suspendido">Suspendido</option>
-												<option value="Vitalicio">Vitalicio</option>
-					    					</select>
-										</div>	
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-6">
-											<div class="col-sm-6 text-left">
-												<label for="" class="control-label">Fecha de Renovación:</label>
-											</div>
-											<div class="col-sm-6">
-												<input class="form-control datepicker"  placeholder="MM/DD/YYYY" value="05/02/2017" type="text" id="fechaR6-2" >
-											</div>		
-									</div>								
-								</div>
-								<div class="form-group">
-									<div class="col-sm-6">
-											<div class="col-sm-6 text-left">
-												<label for="" class="control-label">Socio desde:</label>
-											</div>
-											<div class="col-sm-6">
-												<input class="form-control datepicker"  placeholder="MM/DD/YYYY" value="05/02/2015" type="text" id="fechaR6-3" >
-											</div>		
-									</div>
-									<div class="col-sm-6">
-										<div class="col-sm-6 text-left">
-											<label for="" class="control-label">Años:</label>
-										</div>
-										<div class="col-sm-6">
-											<input type="text" class="form-control" id="anhos" placeholder="N° años" value="1" style="max-width: 250px" >
-										</div>		
-									</div>
-								</div>
-
-							</form>
-						</div>
 					</div>
 				</div>
 			</div> 	
 			<br/><br/>
-			<div class="row">
-				<div class="col-sm-12 text-center">
-							<button id="btn-savechanges1" class="btn btn-lg btn-primary" onclick="guardar_cambios_cuenta()" >Guardar Cambios</button>	
-				</div>
-			</div>
+
 		</div>
 	</div>		
 @stop
