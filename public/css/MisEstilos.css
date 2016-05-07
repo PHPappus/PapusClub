@@ -8,7 +8,7 @@
 }
 
 .content {
-    max-width: 960px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
@@ -52,7 +52,7 @@
 
 .menu {
     float: left;
-    padding-left: 90px;
+    padding-left: 85px;
     -webkit-transition: all .3s ease; 
     transition: all .3s ease;
 }

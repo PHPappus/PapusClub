@@ -1,9 +1,10 @@
 <?php
 
 namespace papusclub\Http\Controllers;
-use Illuminate\Http\Request;
-use papusclub\Http\Requests;
 
+use Illuminate\Http\Request;
+
+use papusclub\Http\Requests;
 use papusclub\Sede;
 use papusclub\Http\Requests\StoreSedeRequest;
 use papusclub\Http\Requests\EditSedeRequest;
@@ -14,12 +15,12 @@ class SedesController extends Controller
     public function index()
     {
     	$sedes = Sede::all();
-    	return view('internal.admin.sedes.index', compact('sedes'));
+    	return view('admin-general.sede.index', compact('sedes'));
     }
 
     public function create()
     {
-    	return view('internal.admin.sedes.newSede');
+    	return view('admin-general.sede.newSede');
     }
 
     public function store(StoreSedeRequest $request)
@@ -42,7 +43,7 @@ class SedesController extends Controller
     public function edit($id)
     {
         $sede = Sede::find($id);
-        return view('internal.admin.sedes.editSede', compact('sede'));
+        return view('admin-general.sede.editSede', compact('sede'));
     }
 
     public function update(EditSedeRequest $request, $id)

@@ -2,6 +2,14 @@ $(document).ready(function(){
   $('.bxslider').bxSlider();
 });
 
+
+$(document).ready(function(){
+	$('.inputmodify').change(function(){
+		document.getElementById('btn-savechanges1').disabled=false;
+	});
+});
+
+
 function openLogin(){
 	location.href="login";
 }
@@ -11,35 +19,52 @@ function openHistoriaCallao(){
 }
 
 function hacerBusqueda(){
-	location.href="reserva-bungalow-busqueda#marca";
+	location.href="reserva-bungalows-b-s#marca";
 }
 function openHistoriaPapusClub(){
 	location.href="historia-papusclub-ver-mas#marca";
 }
 
-function buscarambientes(){
-	location.href="anular-reserva-ambiente-b-al";
-}
 
-function openIngresaruser(){
-	location.href="tipo-login";
-}
 function confirmar_registro_solicitud_postulante(){
 	location.href="REGISTRAR-SOLICITUD-POSTULANTE-O-AL";
 }
 
-function ir_inicio_como_socio(){
-	location.href="inicio-al-socio";
+
+function registrarAmbiente(){
+	location.href="registrar-ambiente";
 }
-function ir_inicio_como_admin(){
-	location.href="inicio-al-admin";
+
+function modificarAmbiente(){
+	location.href="modificar-ambiente";
 }
-function ir_inicio_como_gerente(){
-	location.href="inicio-al-gerente";
+
+function registrarNuevoUsuario(){
+	location.href="usuario/create";
 }
-function ir_inicio_como_admin_pagos(){
-	location.href="inicio-al-admin-pagos";
+
+function anularReservaAmbiente(){
+	location.href="anular-reserva-ambiente-s";
 }
+
+function anularReservaAmbienteB(){
+	location.href="anular-reserva-ambiente-b-s";
+}
+function buscarAmbientes(){
+	location.href="anular-reserva-ambiente-b-s";
+}
+
+function buscar_ambientes_x_user(){
+	location.href="#";
+}
+
+function openTallerFutbol(){
+	location.href="futbol-s";
+}
+function reservarBungalow(){
+	location.href="reserva-bungalows-s";
+}
+
 function ir_inicio_como_admin_registros(){
 	location.href="inicio-al-admin-registros";
 }
@@ -54,4 +79,8 @@ function confirmar_modificacion_proveedor(){
 }
 function cancelar_modificacion_proveedor(){
 	location.href="inicio-al-admin";	
+
+function buscarBungalow(){
+	location.href="bungalows";
+
 }
