@@ -13179,3 +13179,257 @@ Stack trace:
 #61 C:\xampp\htdocs\prueba\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #62 C:\xampp\htdocs\prueba\PapusClub\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #63 {main}  
+[2016-05-07 00:54:54] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Cannot declare class CreatePostulanteTable, because the name is already in use in C:\xampp\htdocs\PapusClub\database\migrations\2016_05_06_144617_create_postulante_table.php:49
+Stack trace:
+#0 {main}  
+[2016-05-07 00:56:01] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "bd" namespace. in C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php:466
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(498): Symfony\Component\Console\Application->findNamespace('bd')
+#1 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('bd:seed')
+#2 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2016-05-07 00:58:00] local.ERROR: PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'jperez@papusclub.com' for key 'users_email_unique' in C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php:408
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(408): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(666): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `us...', Array)
+#2 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(629): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#3 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(409): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#4 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(365): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#5 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1954): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#6 C:\xampp\htdocs\PapusClub\database\seeds\UsersTableSeeder.php(18): Illuminate\Database\Query\Builder->insert(Array)
+#7 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(39): UsersTableSeeder->run()
+#8 C:\xampp\htdocs\PapusClub\database\seeds\DatabaseSeeder.php(14): Illuminate\Database\Seeder->call('UsersTableSeede...')
+#9 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(63): DatabaseSeeder->run()
+#10 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(11010): Illuminate\Database\Console\Seeds\SeedCommand->Illuminate\Database\Console\Seeds\{closure}()
+#11 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(64): Illuminate\Database\Eloquent\Model::unguarded(Object(Closure))
+#12 [internal function]: Illuminate\Database\Console\Seeds\SeedCommand->fire()
+#13 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1240): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#15 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Seeds\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'jperez@papusclub.com' for key 'users_email_unique' (SQL: insert into `users` (`name`, `email`, `password`, `type`) values (Juan Perez, jperez@papusclub.com, y$alNyXwAsGySjJvaerAM2VeDgkE/u3NbREvAYy3BBoZr//E/ABIJtW, socio)) in C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php:673
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(629): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(409): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#2 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(365): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#3 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1954): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#4 C:\xampp\htdocs\PapusClub\database\seeds\UsersTableSeeder.php(18): Illuminate\Database\Query\Builder->insert(Array)
+#5 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(39): UsersTableSeeder->run()
+#6 C:\xampp\htdocs\PapusClub\database\seeds\DatabaseSeeder.php(14): Illuminate\Database\Seeder->call('UsersTableSeede...')
+#7 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(63): DatabaseSeeder->run()
+#8 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(11010): Illuminate\Database\Console\Seeds\SeedCommand->Illuminate\Database\Console\Seeds\{closure}()
+#9 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(64): Illuminate\Database\Eloquent\Model::unguarded(Object(Closure))
+#10 [internal function]: Illuminate\Database\Console\Seeds\SeedCommand->fire()
+#11 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1240): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#13 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Seeds\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 {main}  
+[2016-05-07 00:58:43] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "rollback" is not defined.
+
+Did you mean this?
+    migrate:rollback in C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php:512
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('rollback')
+#1 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-05-07 00:58:58] local.ERROR: PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'persona' already exists in C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php:408
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(408): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(666): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'create table `p...', Array)
+#2 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(629): Illuminate\Database\Connection->runQueryCallback('create table `p...', Array, Object(Closure))
+#3 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(409): Illuminate\Database\Connection->run('create table `p...', Array, Object(Closure))
+#4 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Blueprint.php(83): Illuminate\Database\Connection->statement('create table `p...')
+#5 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(205): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(6237): Illuminate\Database\Schema\Builder->create('persona', Object(Closure))
+#8 C:\xampp\htdocs\PapusClub\database\migrations\2016_05_06_144552_create_persona_table.php(27): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#9 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(147): CreatePersonaTable->up()
+#10 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_05_06_1445...', 1, false)
+#11 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#12 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(76): Illuminate\Database\Migrations\Migrator->run('C:\\xampp\\htdocs...', Array)
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1240): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#16 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'persona' already exists (SQL: create table `persona` (`id_persona` bigint not null, `nombre` varchar(255) not null, `ap_paterno` varchar(255) not null, `ap_materno` varchar(255) not null, `fecha_nacimiento` timestamp not null, `correo` varchar(255) not null, `id_tipo_persona` varchar(255) not null, `id_usuario` int not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate utf8_unicode_ci) in C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php:673
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(629): Illuminate\Database\Connection->runQueryCallback('create table `p...', Array, Object(Closure))
+#1 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(409): Illuminate\Database\Connection->run('create table `p...', Array, Object(Closure))
+#2 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Blueprint.php(83): Illuminate\Database\Connection->statement('create table `p...')
+#3 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(205): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(6237): Illuminate\Database\Schema\Builder->create('persona', Object(Closure))
+#6 C:\xampp\htdocs\PapusClub\database\migrations\2016_05_06_144552_create_persona_table.php(27): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#7 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(147): CreatePersonaTable->up()
+#8 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_05_06_1445...', 1, false)
+#9 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#10 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(76): Illuminate\Database\Migrations\Migrator->run('C:\\xampp\\htdocs...', Array)
+#11 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#12 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1240): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#14 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 {main}  
+[2016-05-07 00:59:45] local.ERROR: PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'persona' already exists in C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php:408
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(408): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(666): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'create table `p...', Array)
+#2 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(629): Illuminate\Database\Connection->runQueryCallback('create table `p...', Array, Object(Closure))
+#3 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(409): Illuminate\Database\Connection->run('create table `p...', Array, Object(Closure))
+#4 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Blueprint.php(83): Illuminate\Database\Connection->statement('create table `p...')
+#5 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(205): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(6237): Illuminate\Database\Schema\Builder->create('persona', Object(Closure))
+#8 C:\xampp\htdocs\PapusClub\database\migrations\2016_05_06_144552_create_persona_table.php(27): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#9 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(147): CreatePersonaTable->up()
+#10 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_05_06_1445...', 1, false)
+#11 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#12 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(76): Illuminate\Database\Migrations\Migrator->run('C:\\xampp\\htdocs...', Array)
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1240): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#16 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'persona' already exists (SQL: create table `persona` (`id_persona` bigint not null, `nombre` varchar(255) not null, `ap_paterno` varchar(255) not null, `ap_materno` varchar(255) not null, `fecha_nacimiento` timestamp not null, `correo` varchar(255) not null, `id_tipo_persona` varchar(255) not null, `id_usuario` int not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate utf8_unicode_ci) in C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php:673
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(629): Illuminate\Database\Connection->runQueryCallback('create table `p...', Array, Object(Closure))
+#1 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(409): Illuminate\Database\Connection->run('create table `p...', Array, Object(Closure))
+#2 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Blueprint.php(83): Illuminate\Database\Connection->statement('create table `p...')
+#3 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(205): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(6237): Illuminate\Database\Schema\Builder->create('persona', Object(Closure))
+#6 C:\xampp\htdocs\PapusClub\database\migrations\2016_05_06_144552_create_persona_table.php(27): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#7 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(147): CreatePersonaTable->up()
+#8 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_05_06_1445...', 1, false)
+#9 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#10 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(76): Illuminate\Database\Migrations\Migrator->run('C:\\xampp\\htdocs...', Array)
+#11 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#12 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1240): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#14 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 {main}  
+[2016-05-07 01:01:05] local.ERROR: ReflectionException: Class postulanteTableSeeder does not exist in C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php:1341
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1341): ReflectionClass->__construct('postulanteTable...')
+#1 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1295): Illuminate\Container\Container->build('postulanteTable...', Array)
+#2 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1857): Illuminate\Container\Container->make('postulanteTable...', Array)
+#3 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(55): Illuminate\Foundation\Application->make('postulanteTable...')
+#4 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(39): Illuminate\Database\Seeder->resolve('postulanteTable...')
+#5 C:\xampp\htdocs\PapusClub\database\seeds\DatabaseSeeder.php(15): Illuminate\Database\Seeder->call('postulanteTable...')
+#6 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(63): DatabaseSeeder->run()
+#7 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(11010): Illuminate\Database\Console\Seeds\SeedCommand->Illuminate\Database\Console\Seeds\{closure}()
+#8 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(64): Illuminate\Database\Eloquent\Model::unguarded(Object(Closure))
+#9 [internal function]: Illuminate\Database\Console\Seeds\SeedCommand->fire()
+#10 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1240): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#12 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Seeds\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 {main}  
+[2016-05-07 01:02:27] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "db:migrate" is not defined.
+
+Did you mean one of these?
+    migrate
+    db:seed in C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php:512
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('db:migrate')
+#1 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-05-07 01:02:36] local.ERROR: PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'jperez@papusclub.com' for key 'users_email_unique' in C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php:408
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(408): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(666): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `us...', Array)
+#2 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(629): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#3 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(409): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#4 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(365): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#5 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1954): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#6 C:\xampp\htdocs\PapusClub\database\seeds\UsersTableSeeder.php(18): Illuminate\Database\Query\Builder->insert(Array)
+#7 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(39): UsersTableSeeder->run()
+#8 C:\xampp\htdocs\PapusClub\database\seeds\DatabaseSeeder.php(14): Illuminate\Database\Seeder->call('UsersTableSeede...')
+#9 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(63): DatabaseSeeder->run()
+#10 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(11010): Illuminate\Database\Console\Seeds\SeedCommand->Illuminate\Database\Console\Seeds\{closure}()
+#11 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(64): Illuminate\Database\Eloquent\Model::unguarded(Object(Closure))
+#12 [internal function]: Illuminate\Database\Console\Seeds\SeedCommand->fire()
+#13 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1240): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#15 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Seeds\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'jperez@papusclub.com' for key 'users_email_unique' (SQL: insert into `users` (`name`, `email`, `password`, `type`) values (Juan Perez, jperez@papusclub.com, y$jcXVITvnU1Fth3.zRGfDOORbfkChN1J/DwWJ10ayzW9iQFHxtX8Y2, socio)) in C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php:673
+Stack trace:
+#0 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(629): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(409): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#2 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Connection.php(365): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#3 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1954): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#4 C:\xampp\htdocs\PapusClub\database\seeds\UsersTableSeeder.php(18): Illuminate\Database\Query\Builder->insert(Array)
+#5 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(39): UsersTableSeeder->run()
+#6 C:\xampp\htdocs\PapusClub\database\seeds\DatabaseSeeder.php(14): Illuminate\Database\Seeder->call('UsersTableSeede...')
+#7 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(63): DatabaseSeeder->run()
+#8 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(11010): Illuminate\Database\Console\Seeds\SeedCommand->Illuminate\Database\Console\Seeds\{closure}()
+#9 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(64): Illuminate\Database\Eloquent\Model::unguarded(Object(Closure))
+#10 [internal function]: Illuminate\Database\Console\Seeds\SeedCommand->fire()
+#11 C:\xampp\htdocs\PapusClub\bootstrap\cache\compiled.php(1240): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#13 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Seeds\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\PapusClub\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\PapusClub\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\PapusClub\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 {main}  
