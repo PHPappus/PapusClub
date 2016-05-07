@@ -22,7 +22,6 @@ Route::get('/{nombre}', function ($nombre) {
 });*/
 
 Route::resource('usuario','UsuarioController');
-
 Route::resource('log','LogController');
 Route::get('logout','LogController@logout');
 
