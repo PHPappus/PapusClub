@@ -26,6 +26,7 @@ function openHistoriaPapusClub(){
 }
 
 
+
 function confirmar_registro_solicitud_postulante(){
 	location.href="REGISTRAR-SOLICITUD-POSTULANTE-O-AL";
 }

@@ -59,8 +59,8 @@
 					@endforeach
 				</table>		
 				<div class="form-group">
-				<div class="col-sm-7">
-					<a class="btn btn-info" href="{{url('/sedes/new')}}" title="Registrar Sede" ><i class="glyphicon glyphicon-plus"></i></a>	
+				<div class="col-sm-16 text-center">
+					<a class="btn btn-info" href="{{url('/sedes/new')}}" title="Registrar Sede" ><i class="glyphicon glyphicon-plus"></i> </a>	
 				</div>
 		</div>
 

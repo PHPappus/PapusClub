@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{!!Html::style('css/jquery.bxslider.css')!!}
-	{!!Html::style('css/font-awesome.css')!!}
-	{!!Html::style('css/bootstrap.css')!!}
-	{!!Html::style('css/MisEstilos.css')!!}
+	{!!Html::style('../css/jquery.bxslider.css')!!}
+	{!!Html::style('../css/font-awesome.css')!!}
+	{!!Html::style('../css/bootstrap.css')!!}
+	{!!Html::style('../css/MisEstilos.css')!!}
 	
 </head>
 <body>
@@ -51,19 +51,19 @@
 				<div class="form-group">
 					<label for="" class="control-label col-sm-5">PROVINCIA:</label>
 					<div class="col-sm-7">
-						<input type="text" class="form-control" name="provincia" id="provincia-sede" placeholder="PROVINCIA" style="max-width: 250px">
+						<input type="text"  class="form-control" name="provincia" id="provincia-sede" placeholder="PROVINCIA" style="max-width: 250px">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="" class="control-label col-sm-5">DEPARTAMENTO:</label>
 					<div class="col-sm-7">
-						<input type="text" class="form-control" name="departamento" id="departamento-sede" placeholder="DEPARTAMENTO" style="max-width: 250px">
+						<input type="text"  class="form-control" name="departamento" id="departamento-sede" placeholder="DEPARTAMENTO" style="max-width: 250px">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="" class="control-label col-sm-5">CAPACIDAD:</label>
 					<div class="col-sm-7">
-						<input type="text" class="form-control" name="capacidad" id="capacidad-sede" placeholder="CAPACIDAD" style="max-width: 100px">
+						<input type="number" pattern = "[0-9]{0,100000}" class="form-control" name="capacidad" id="capacidad-sede" placeholder="CAPACIDAD" style="max-width: 100px">
 					</div>
 				</div>
 				<br/>
@@ -71,7 +71,10 @@
 				<br/>
 				<div class="form-group">
 					<div class="col-sm-6 text-center">
-						<input type="submit" value="Confirmar">	
+						<input class="btn btn-success" href="{{action('SedesController@index')}}" type="submit" value="Confirmar">
+					</div>
+					<div class="col-sm-6 text-center">
+						<a href="/sedes/index" class="btn btn-danger">Cancelar</a>
 					</div>
 					
 				</div>
@@ -80,13 +83,13 @@
 	</div>		
 @stop
 <!-- JQuery -->
-	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="../js/jquery-1.11.3.min.js"></script>
 	<!-- Bootstrap -->
-	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.js"></script>
 	<!-- BXSlider -->
-	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="../js/jquery.bxslider.min.js"></script>
 	<!-- Mis Scripts -->
-	<script src="js/MisScripts.js"></script>
+	<script src="../js/MisScripts.js"></script>
 
 
 </body>

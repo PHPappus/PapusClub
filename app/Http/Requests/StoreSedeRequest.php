@@ -24,11 +24,11 @@ class StoreSedeRequest extends Request
     public function rules()
     {
         return [
-            'nombre'          =>  'required|max:100',
-            'direccion'       =>  'required|max:100',
-            'distrito'      =>  'required|max:100',
-            'provincia'      =>  'required|max:100',
-            'departamento'         =>  'required|max:100',
+            'nombre'          =>  'required|max:100|string',
+            'direccion'       =>  'required|max:100|string',
+            'distrito'      =>  'required|max:100|string',
+            'provincia'      =>  'required|max:100|string',
+            'departamento'         =>  'required|max:100|string',
             'capacidad'      =>  'integer|min:1',
             
         ];
