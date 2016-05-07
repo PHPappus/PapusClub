@@ -7,6 +7,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+use papusclub\Proveedor;
+use papusclub\Http\Controllers\Controller;
 
 class Controller extends BaseController
 {

@@ -43,3 +43,15 @@ function ir_inicio_como_admin_pagos(){
 function ir_inicio_como_admin_registros(){
 	location.href="inicio-al-admin-registros";
 }
+function confirmar_registro_proveedor(){
+	location.href="registrar-proveedor-0-al";
+}	
+function cancelar_registro_proveedor(){
+	location.href="inicio-al-admin";
+}
+function confirmar_modificacion_proveedor(){
+	location.href="modificar-proveedor-0-al";
+}
+function cancelar_modificacion_proveedor(){
+	location.href="inicio-al-admin";	
+}

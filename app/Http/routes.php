@@ -13,13 +13,19 @@
 
 /*Route::get('/', function () {
     return view('welcome');
-});*/
-Route::get('/', 'FrontController@index');
+});
+*/
+Route::get('/', 'ProveedorController@index');
+
+Route::get('/modificar-proveedor-al','ProveedorController@getRegistrarProveedor');
+
+Route::get('registrar-proveedor-al', 'ProveedorController@Create');
+Route::post('registrar-proveedor-al/nuevo', 'ProveedorController@InsertProveedor');
+//Route::get('/modificar-proveedor-0-al','ProveedorController@confirmar_registro_ambiente');
+
 Route::get('/{nombre}', function ($nombre) {
      return view($nombre);
 });
-
-
 /*
 Route::get('/', 'FrontController@index');
 Route::get('login', 'FrontController@login');
