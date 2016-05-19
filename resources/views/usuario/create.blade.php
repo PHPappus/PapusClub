@@ -9,6 +9,12 @@
 	{!!Html::style('css/font-awesome.css')!!}
 	{!!Html::style('css/bootstrap.css')!!}
 	{!!Html::style('css/MisEstilos.css')!!}
+	<style>
+
+		.modal-backdrop.in{
+			//z-index: -2;
+		}
+	</style>
 <!-- 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 <link rel="stylesheet" href="css/font-awesome.css">
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -33,12 +39,36 @@
 			</div>	
 		</div>
 		<div class="container">
+
+
+
 			{!!Form::open(['route'=>'usuario.store', 'method'=>'POST', 'class' =>'form-horizontal form-border'])!!}
 				<br/><br/>
 				@include('usuario.forms.user')
 				<div class="form-group">
 					<div class="col-sm-12 text-center">
-						{!!Form::submit('Registrar',['class'=>'btn btn-lg btn-primary'])!!}
+						<!-- {!!Form::submit('Registrar',['class'=>'btn btn-lg btn-primary'])!!} -->
+						<!-- <a href="#confirmation" class="btn btn-lg btn-primary" data-toggle="modal">REGISTRAR</a> -->
+						<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#confirmation">
+						  REGISTRAR
+						</button>
+						<!-- style="z-index:2; padding-top:100px;" -->
+						<!-- <button type="submit" class="btn btn-lg btn-primary">Registrar</button> -->
+						<div class="modal fade" id="confirmation" tabindex="-1" role="dialog" aria-labelledby="confirmationLabel" style="padding-top:100px;position: relative;z-index: 5;">
+							<div class="modal-dialog" role="document" style="z-index: 5;">
+								<div class="modal-content">
+									<!-- Header de la ventana -->
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title">CONFIRMAR REGISTRO DE USUARIO</h4>
+									</div>
+									<!-- Contenido de la ventana -->
+									<div class="modal-body">
+										<p>¿Desea confirmar el registro del usuario?</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>	
 				</div>
 			{!!Form::close()!!}
@@ -49,9 +79,7 @@
 
 	{!!Html::script('js/jquery-1.11.3.min.js')!!}
 	{!!Html::script('js/bootstrap.js')!!}
-	{!!Html::script('js/jquery.bxslider.min.js')!!}
-	{!!Html::script('js/MisScripts.js')!!}
-
+	
 	<!-- <script src="js/jquery-1.11.3.min.js"></script>
 	Bootstrap
 	<script type="text/javascript" src="js/bootstrap.js"></script>

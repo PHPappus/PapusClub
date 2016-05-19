@@ -31,7 +31,10 @@ class adminRegistrosController extends Controller
     public function modificar(){
         return view('admin-registros.ambientes.modificar-ambiente-al');
     }
-
+    public function cuenta()
+    {
+       return view('admin-registros.cuenta-al-adminr');
+    }
 
     /**
      * Show the form for creating a new resource.

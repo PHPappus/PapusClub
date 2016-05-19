@@ -1,6 +1,7 @@
 .header{
     position: relative;  
-    z-index: 3;          
+    z-index: 3;      
+    /* z-index: 3;   */  
 }
 
 .clearfix {
@@ -43,7 +44,7 @@
 .logo {
     margin: 0;
     position: absolute;   
-    z-index: 2;
+    z-index: 1;
     top: 10px;
 }
 #menu-2{
@@ -196,7 +197,7 @@
 
 .footer{/*Pie de pagina*/
     position: relative;
-    z-index: 2;
+    z-index: -1;/*2*/
 }
 
 .footer .logofoot {/*Pie de pagina*/
@@ -284,9 +285,15 @@
     padding: 20px; 
     height: 150px;    
 }
-
+.panel-login-box{
+    background-color: rgba(57, 85, 101, 0.7);
+    border: 2.5px solid #ddd;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
 .login-box{
-    background-image: url("images/login.jpg") !important;
+    /*background-image: url("images/login.jpg") !important;*/
+    background-color: rgba(57, 85, 101, 0.7);
     border-radius: 25px;
     border: 5px solid #21AF82;
     margin-top: 50px;
@@ -294,7 +301,8 @@
     height: 450px;    
 }
 .login-links{
-    color: #FFFFFF !important;
+    font-size: 16.5px;
+    color: #A5A5A5 !important;
 }
 
 .otibar{

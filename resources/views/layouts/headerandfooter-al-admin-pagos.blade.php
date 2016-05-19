@@ -69,7 +69,6 @@
 						<li><span><img class="PointImg" src="images/punto.png" width="3px" height="3px"></img></span></li>
 						<li><a href="#" title="Privacidad">PRIVACIDAD</a></li>
 						<li><span><img class="PointImg" src="images/punto.png" width="3px" height="3px"></img></span></li>
-						<li><a href="#" title="MAPA DE SITIO">MAPA DE SITIO</a></li>
 				</ul>
 					
 			</div>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use papusclub\Http\Requests;
 use papusclub\Http\Requests\UserCreateRequest;
 use papusclub\User;
+
 use Session;
 use Redirect;
 use Illuminate\Routing\Route;

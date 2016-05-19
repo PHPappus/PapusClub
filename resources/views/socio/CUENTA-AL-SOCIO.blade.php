@@ -22,7 +22,7 @@
 			<div class="row">
 				<div class="col-sm-2">
 					<ol class="breadcrumb">
-						<li><a href="inicio-al-socio"><span class="glyphicon glyphicon-home"></span></a></li>
+						<li><a href="{{url('socio')}}"><span class="glyphicon glyphicon-home"></span></a></li>
 						<li class="active">Cuenta</li>
 					</ol>
 				</div>				

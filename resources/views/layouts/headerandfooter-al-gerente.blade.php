@@ -27,7 +27,7 @@
 					<ul>
 						<li><a href="#">{!!Auth::user()->name!!}  <span class="glyphicon glyphicon-user"></span></a>
 									<ul>
-										<li><a href="{!!URL::to('/cuenta-s')!!}" title="ir a ver curso 1" target="_self">CUENTA</a></li>
+										<li><a href="{!!URL::to('/cuenta-g')!!}" title="ir a ver curso 1" target="_self">CUENTA</a></li>
 										<li><a href="{!!URL::to('/logout')!!}" title="LOGOUT" target="_self">LOGOUT</a></li>
 									</ul>
 						</li>
@@ -70,7 +70,6 @@
 						<li><span><img class="PointImg" src="images/punto.png" width="3px" height="3px"></img></span></li>
 						<li><a href="#" title="Privacidad">PRIVACIDAD</a></li>
 						<li><span><img class="PointImg" src="images/punto.png" width="3px" height="3px"></img></span></li>
-						<li><a href="#" title="MAPA DE SITIO">MAPA DE SITIO</a></li>
 				</ul>
 					
 			</div>

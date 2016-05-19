@@ -18,6 +18,10 @@ class adminPagosController extends Controller
         return view('admin-pagos.inicio-al-admin-pagos');
     }
 
+    public function cuenta()
+    {
+       return view('admin-pagos.cuenta-al-adminp');
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{!!Html::style('css/jquery.bxslider.css')!!}
-	{!!Html::style('css/font-awesome.css')!!}
-	{!!Html::style('css/bootstrap.css')!!}
-	{!!Html::style('css/MisEstilos.css')!!}
+	{!!Html::style('../css/jquery.bxslider.css')!!}
+	{!!Html::style('../css/font-awesome.css')!!}
+	{!!Html::style('../css/bootstrap.css')!!}
+	{!!Html::style('../css/MisEstilos.css')!!}
 	
 </head>
 
@@ -27,63 +27,101 @@
 		</div>
 		<div class="container">
 			<!--@include('errors.503')-->		
-			<form method="POST" action="/sedes/{{ $sede->id}}/edit" class="form-horizontal form-border">
-			<input type="hidden" name="_token" value="{{ csrf_token() }}">
+			<form method="POST" action="/sedes/{{ $sede->id }}/edit" class="form-horizontal form-border">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<br/><br/>
+
+				<!-- INICIO INCIIO -->
 				<div class="form-group">
-					<label for="" class="control-label col-sm-5">NOMBRE:</label>
-					<div class="col-sm-7">
-						<input type="text" class="form-control" name='nombre' id="nombre-sede" value="{{$sede->nombre}}" style="max-width: 250px">
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="" class="control-label col-sm-5">DIRECCION:</label>
-					<div class="col-sm-7">
-						<input type="text" class="form-control" name="direccion" id="direccion-sede" value="{{$sede->direccion}}" style="max-width: 250px">
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="" class="control-label col-sm-5">DISTRITO:</label>
-					<div class="col-sm-7">
-						<input type="text" class="form-control" name="distrito" id="distrito-sede" value="{{$sede->distrito}}" style="max-width: 250px">
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="" class="control-label col-sm-5">PROVINCIA:</label>
-					<div class="col-sm-7">
-						<input type="text" class="form-control" name="provincia" id="provincia-sede" value="{{$sede->provincia}}" style="max-width: 250px">
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="" class="control-label col-sm-5">DEPARTAMENTO:</label>
-					<div class="col-sm-7">
-						<input type="text" class="form-control" name="departamento" id="departamento-sede" value="{{$sede->departamento}}" style="max-width: 250px">
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="" class="control-label col-sm-5">CAPACIDAD:</label>
-					<div class="col-sm-7">
-						<input type="text" class="form-control" name="capacidad" id="capacidad-sede" value="{{$sede->capacidad}}" style="max-width: 100px">
-					</div>
-				</div>
+		    		<label for="nombreInput" class="col-sm-4 control-label">Nombre</label>
+		    		<div class="col-sm-5">
+		      			<input type="text" class="form-control" id="nombreInput" name="nombre" value="{{$sede->nombre}}" >
+		    		</div>
+		  		</div>
+			  	<div class="form-group">
+			    	<label for="telefonoInput" class="col-sm-4 control-label">Teléfono</label>
+			    	<div class="col-sm-5">
+			      		<input type="number" class="form-control" id="telefonoInput" name="telefono" value="{{$sede->telefono}}" >
+			    	</div>
+			  	</div>
+
+			  	<div class="form-group">
+			    	<label for="contactoInput" class="col-sm-4 control-label">Contacto</label>
+			    	<div class="col-sm-5">
+			      		<input type="text" class="form-control" id="contactoInput" name="nombre_contacto" value="{{$sede->nombre_contacto}}">
+			    	</div>
+			  	</div>	  	
+			  	<div class="form-group">
+			    	<label for="capacidadInput" class="col-sm-4 control-label">Capacidad maxima</label>
+			    	<div class="col-sm-5">
+			      		<input type="number" class="form-control" id="capacidadInput" name="capacidad_maxima" value="{{$sede->capacidad_maxima}}" >
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="capacidadSocioInput" class="col-sm-4 control-label">Capacidad por socio</label>
+			    	<div class="col-sm-5">
+			      		<input type="number" class="form-control" id="capacidadSocioInput" name="capacidad_socio" value="{{$sede->capacidad_socio}}">
+			    	</div>
+			  	</div>
+			  	
+			  	<div class="form-group">
+			    	<label for="departamentoInput" class="col-sm-4 control-label">Departamento</label>
+			    	<div class="col-sm-5">
+			      		<input type="text" class="form-control" id="departamentoInput" name="departamento" value="{{$sede->departamento}}" readonly >
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="provinciaInput" class="col-sm-4 control-label">Provincia</label>
+			    	<div class="col-sm-5">
+			      		<input type="text" class="form-control" id="provinciaInput" name="provincia" value="{{$sede->provincia}}" readonly >
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="distritoInput" class="col-sm-4 control-label">Distrito</label>
+			    	<div class="col-sm-5">
+			      		<input type="text" class="form-control" id="distritoInput" name="distrito" value="{{$sede->distrito}}" readonly >
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="direccionInput" class="col-sm-4 control-label">Dirección</label>
+			    	<div class="col-sm-5">
+			      		<input type="text" class="form-control" id="direccionInput" name="direccion" value="{{$sede->direccion}}" >
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="referenciaInput" class="col-sm-4 control-label">Referencia </label>
+			    	<div class="col-sm-5">
+			      		<input type="comment" class="form-control" id="referenciaInput" name="referencia" value="{{$sede->referencia}}">
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="activoInput" class="col-sm-4 control-label ">Activo</label>
+			    	<div class="col-sm-3">
+			      		<input type="checkbox"  class="checkbox" id="activoInput" name="estado" @if($sede['estado'] == true) checked @endif>
+			    	</div>	    	
+			  	</div>
+					<!-- FIN FIN FIN  -->
+				
 				<br/>
 				<br/>
-				<br/>
-				<div class="form-group">
-					<div class="col-sm-6 text-center">
-						<input type="submit" value="Confirmar">
+				
+				<div class="btn-inline">
+					<div class="btn-group">
+						<input class="btn btn-success" type="submit" value="Confirmar">
 					</div>
-					
+					<div class="btngroup">
+						<a href="/sedes/index" class="btn btn-danger">Cancelar</a>
+					</div>
 				</div>
 			</form>
 		</div>
 	</div>		
 @stop
 <!-- JQuery -->
-	{!!Html::script('js/jquery-1.11.3.min.js')!!}
-	{!!Html::script('js/bootstrap.js')!!}
-	{!!Html::script('js/jquery.bxslider.min.js')!!}
-	{!!Html::script('js/MisScripts.js')!!}
+	{!!Html::script('../js/jquery-1.11.3.min.js')!!}
+	{!!Html::script('../js/bootstrap.js')!!}
+	{!!Html::script('../js/jquery.bxslider.min.js')!!}
+	{!!Html::script('../js/MisScripts.js')!!}
 
 
 

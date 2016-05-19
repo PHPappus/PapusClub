@@ -18,7 +18,7 @@
 				<div class="logo">
 					<div class="edit-logo">
 						<a href="{!!URL::to('/admin-general')!!}" title="Logo oficial de Papus Club">
-							<img src="images/logo.png" alt="Logo Papus Club" href="/">
+							<img src="../images/logo.png" alt="Logo Papus Club" href="/">
 						</a>
 					</div>
 				</div>
@@ -27,7 +27,7 @@
 					<ul>
 						<li><a href="#">{!!Auth::user()->name!!}  <span class="glyphicon glyphicon-user"></span></a>
 								<ul>
-									<li><a href="{!!URL::to('/cuenta-s')!!}" title="ir a ver curso 1" target="_self">CUENTA</a></li>
+									<li><a href="{!!URL::to('/cuenta-a')!!}" title="ir a ver curso 1" target="_self">CUENTA</a></li>
 									<li><a href="{!!URL::to('/logout')!!}" title="LOGOUT" target="_self">LOGOUT</a></li>
 								</ul>
 						</li>
@@ -74,12 +74,12 @@
 	<div class="content clearfix">
 		<div class="footer-1">
 			<div class="logofoot">
-				<img alt="Papus Club" src="images/logo-min.png" title="Papus Club">				
+				<img alt="Papus Club" src="../images/logo-min.png" title="Papus Club">				
 			</div>
 			<div class="contacto">
 				<ul class="info">
 						<li><a href="#" title="telefono">(51) 1 523 4910</a></li>
-						<li><span><img class="PointImg" src="images/punto.png" width="3px" height="3px"></img></span></li>
+						<li><span><img class="PointImg" src="../images/punto.png" width="3px" height="3px"></img></span></li>
 						<li><a href="#" title="e-mail">papus@clubpapus.org.pe</a></li>
 				</ul>
 				<ul class="terminos-condiciones">
@@ -87,7 +87,6 @@
 						<li><span><img class="PointImg" src="images/punto.png" width="3px" height="3px"></img></span></li>
 						<li><a href="#" title="Privacidad">PRIVACIDAD</a></li>
 						<li><span><img class="PointImg" src="images/punto.png" width="3px" height="3px"></img></span></li>
-						<li><a href="#" title="MAPA DE SITIO">MAPA DE SITIO</a></li>
 				</ul>
 					
 			</div>
