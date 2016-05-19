@@ -15,14 +15,17 @@ class CreateSedesTable extends Migration
         Schema::create('sedes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('direccion');
-            $table->string('distrito');
-            $table->string('provincia');
+            $table->string('telefono');
             $table->string('departamento');
-            $table->integer('capacidad');
-            //$table->string('image');
+            $table->string('provincia');
+            $table->string('distrito');
+            $table->string('direccion');
+            $table->string('referencia');
+            $table->string('nombre_contacto');
+            $table->integer('capacidad_maxima');
+            $table->integer('capacidad_socio');
+            $table->boolean('estado');
             $table->timestamps();
-            //$table->softDeletes();
         });
     }
 

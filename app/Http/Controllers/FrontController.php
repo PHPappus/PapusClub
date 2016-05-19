@@ -8,14 +8,9 @@ use papusclub\Http\Requests;
 
 class FrontController extends Controller
 {
-	public function index() {
+	public function home() {
 		return view('inicio');
 	}
-
-    public function login() {
-    	return view('login');
-    }
-    
     public function futbol() {
     	return view('futbol');
     }

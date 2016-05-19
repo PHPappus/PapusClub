@@ -20,6 +20,11 @@ class SocioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         return view('socio.inicio-al-socio');
@@ -67,10 +72,10 @@ class SocioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    /*public function create()
     {
        return view('socio.cuenta-al-socio');
-    }
+    }*/
 
     /**
      * Store a newly created resource in storage.

@@ -49,5 +49,10 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'guest' => \papusclub\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'socio' => \papusclub\Http\Middleware\Socio::class,
+        'gerente' => \papusclub\Http\Middleware\Gerente::class,
+        'admingeneral' => \papusclub\Http\Middleware\AdminGeneral::class,
+        'adminpagos' => \papusclub\Http\Middleware\AdminPagos::class,
+        'adminregistros' => \papusclub\Http\Middleware\AdminRegistros::class,
     ];
 }

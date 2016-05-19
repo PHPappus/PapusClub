@@ -9,11 +9,6 @@
 	{!!Html::style('css/font-awesome.css')!!}
 	{!!Html::style('css/bootstrap.css')!!}
 	{!!Html::style('css/MisEstilos.css')!!}
-<!-- 	<link rel="stylesheet" href="css/jquery.bxslider.css">
-<link rel="stylesheet" href="css/font-awesome.css">
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/MisEstilos.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/estilos.css"> -->
 	
 </head>
 <body>
@@ -23,50 +18,79 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<p class="lead"><strong>TODAS LAS SEDES</strong></p>
+				<br/><br/>
+				<p class="lead"><strong>SEDES</strong></p>
+				<br/>
 			</div>
 			
 		</div>
 	</div>
+	<!--barra de busqueda para mostrar sedes coincidentes con la cadena -->
+			<form method="POST" action="/sedes/search">
+			<input type="hidden" name="_token" value="{{ csrf_token() }}">
+				<div class="form-group">
+					<textarea name="busqueda" class="form-control"></textarea>
 
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Buscar</button> 
+					
+				</div>
+			</form>
+	</div>
+	<!--fin barra de busqueda para mostrar sedes coincidentes con la cadena -->
 	<div class="container">
-			<table class="table table-bordered table-hover text-center">
-					<thead class="active">
-						<th>NOMBRE DE SEDE</th>
-						<th>DIRECCIÓN</th>
-						<th>DISTRITO</th>
-						<th>PROVINCIA</th>
-						<th>DEPARTAMENTO</th>
-						<th>CAPACIDAD</th>
-					</thead>
-					@foreach($sedes as $sede)
-						<tbody>
-							<td>{{ $sede->nombre }}</td>
-							<td>{{ $sede->direccion }}</td>
-							<td>{{ $sede->distrito }}</td>
-							<td>{{ $sede->provincia }}</td>
-							<td>{{ $sede->departamento }}</td>
-							<td>{{ $sede->capacidad }}</td>
-						</tbody>
-					@endforeach
-				</table>		
+		<div class="form-group">
+			<div class="col-sm-16 text-center">
+				<a class="btn btn-info" href="{{url('/sedes/new')}}" title="Registrar Sede" ><i class="glyphicon glyphicon-plus" ></i> </a>	
+			</div>
 		</div>
+		<br/>
+	</div>
+		<div class="table-responsive">
+			<div class="container">
+				<table class="table table-bordered table-hover text-center">
+						<thead class="active">
+							<th><div align=center>SEDE</div> </th>
+							<th><div align=center>DEPARTAMENTO</div></th>
+							<th><div align=center>DIRECCION</div></th>
+							<th><div align=center>CAPACIDAD</div></th>
+							<th><div align=center>DETALLE</div></th>
+							<th><div align=center>EDITAR</div></th>
+							<th><div align=center>ELIMINAR</div></th>
+						</thead>
+
+						@foreach($sedes as $sede)						
+							<tbody>
+								<td>{{ $sede->nombre }}</td>
+								<td>{{ $sede->distrito }}</td>
+	 							<td>{{ $sede->departamento }}</td>
+								<td>{{ $sede->capacidad_maxima }}</td>
+								<td>
+					              <a class="btn btn-info" href="{{url('/sedes/'.$sede->id.'/show')}}"  title="Detalle" ><i class="glyphicon glyphicon-list-alt"></i></a>
+					            </td>
+								<td>
+					              <a class="btn btn-info" href="{{url('/sedes/'.$sede->id.'')}}" title="Editar" ><i class="glyphicon glyphicon-pencil"></i></a>
+					            </td>
+					            <td>
+					              <a class="btn btn-info" href="{{url('/sedes/'.$sede->id.'/delete')}}" title="Eliminar" ><i class="glyphicon glyphicon-remove"></i></a>
+					            </td>
+					            
+							</tbody>						
+						@endforeach
+				</table>			
+			</div>		
+		</div>
+	
+
+		
 
 
 @stop
-{!!Html::script('js/jquery-1.11.3.min.js')!!}
+	{!!Html::script('js/jquery-1.11.3.min.js')!!}
 	{!!Html::script('js/bootstrap.js')!!}
 	{!!Html::script('js/jquery.bxslider.min.js')!!}
 	{!!Html::script('js/MisScripts.js')!!}
-
-	<!-- <script src="js/jquery-1.11.3.min.js"></script>
-	Bootstrap
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	BXSlider
-	<script src="js/jquery.bxslider.min.js"></script>
-	Mis Scripts
-	<script src="js/MisScripts.js"></script> -->
-
 
 </body>
 </html>

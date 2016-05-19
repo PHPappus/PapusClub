@@ -24,12 +24,16 @@ class EditSedeRequest extends Request
     public function rules()
     {
         return [
-            'nombre'          =>  'required|max:100',
-            'direccion'       =>  'required|max:100',
-            'distrito'      =>  'required|max:100',
-            'provincia'      =>  'required|max:100',
-            'departamento'         =>  'required|max:100',
-            'capacidad'      =>  'integer|min:1',
+            'nombre'          =>  'required|max:100|string',
+            'telefono'       =>  'required|max:12|string',
+            'departamento'       =>  'required|max:100|string',
+            'provincia'      =>  'required|max:100|string',
+            'distrito'      =>  'required|max:100|string',
+            'direccion'         =>  'required|max:100|string',
+            'referencia'         =>  'required|max:100|string',
+            'nombre_contacto'         =>  'required|max:100|string',
+            'capacidad_maxima'      =>  'integer|min:1',
+            'capacidad_socio'      =>  'integer|min:1',
             
         ];
     }

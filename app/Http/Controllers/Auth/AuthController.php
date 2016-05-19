@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    /*protected $redirectTo = '/socio';*/
 
     /**
      * Create a new authentication controller instance.
@@ -38,6 +38,7 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        /*$this->middleware('guest', ['except' => 'getLogout']);*/
     }
 
     /**
@@ -69,4 +70,27 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function redirectPath()
+    {
+        switch (\Auth::user()->perfil_id) {
+            case '1':
+            return '/socio';
+            break;
+            case '2':
+            return '/admin-general';
+            break;
+            case '3':
+            return '/admin-pagos';
+            break;
+            case '4':
+            return '/admin-registros';
+            break;
+            case '5':
+            return '/gerente';
+            break;
+        }
+    }
 }
+
+    

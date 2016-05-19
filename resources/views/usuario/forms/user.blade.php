@@ -19,14 +19,14 @@
 	</div>
 </div>
 <div class="form-group">
-		<label for="type" class="control-label col-sm-3 col-sm-offset-2 lead"><strong>Tipo de Usuario:</strong></label>
+		<label for="perfil_id" class="control-label col-sm-3 col-sm-offset-2 lead"><strong>Perfil de Usuario:</strong></label>
 		<div class="col-sm-5">
-			<select id="typeuser" class="form-control inputmodify" name="type" type="type" style="max-width: 250px " >
-                <option value="socio" default>Socio</option>
-                <option value="gerente">Gerente</option>
-				<option value="admin-g">administrador general</option>
-				<option value="admin-p">administrador de pagos</option>
-				<option value="admin-r">administrador de registros</option>
+			<select id="perfil_id" class="form-control inputmodify" name="perfil_id" type="perfil_id" style="max-width: 250px " >
+                <option value=1 default>Socio</option>
+                <option value=5>Gerente</option>
+				<option value=2>administrador general</option>
+				<option value=3>administrador de pagos</option>
+				<option value=4>administrador de registros</option>
 			</select>
 		</div>	
 </div>

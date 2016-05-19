@@ -27,15 +27,15 @@
 					<ul>
 						<li><a href="#">{!!Auth::user()->name!!}  <span class="glyphicon glyphicon-user"></span></a>
 									<ul>
-										<li><a href="{!!URL::to('/cuenta')!!}" title="ir a ver curso 1" target="_self">CUENTA</a></li>
+										<li><a href="{!!URL::to('/cuenta-ar')!!}" title="ir a ver curso 1" target="_self">CUENTA</a></li>
 										<li><a href="{!!URL::to('/logout')!!}" title="LOGOUT" target="_self">LOGOUT</a></li>
 									</ul>
 						</li>
 						<!-- Opción SOCIO -->
 						<li><a href="#">SOCIO</a></li>
 						<!-- Sedes -->
-						<li><a href="#">PAGO<span class="despliegue">▼</span></a>
-							<ul>
+						<li><a href="#">PAGO<!-- <span class="despliegue">▼</span> --></a>
+							<!-- <ul>
 								<li><a href="#" title="ir a curso 1" target="_self">CURSO 2<span class="despliegue">▼</span></a>
 									<ul>
 										<li><a href="#" title="ir a ver curso 1" target="_self">VER CURSO</a></li>
@@ -48,7 +48,7 @@
 										<li><a href="#" title="ir a inscribirse 2" target="_self">INSCRIBIRSE</a></li>
 									</ul>						
 								</li>
-							</ul>
+							</ul> -->
 						</li>
 						<!-- Opción Actividades -->
 						<li><a href="#">TALLER<span class="despliegue">▼</span></a>
@@ -99,22 +99,22 @@
 							</ul>
 						</li>
 						<!-- Opción MANTENIMIENTO -->
-						<li><a href="#">BUNGALOW<span class="despliegue">▼</span></a>
+						<li><a href="#">BUNGALOW<!-- <span class="despliegue">▼</span> --></a>
 							<ul>
 								
 								
 							</ul>
 						</li>
 												<!-- Opción Eventos -->
-						<li><a href="#">ACTIVIDAD<span class="despliegue">▼</span></a>
-							<ul>
+						<li><a href="#">ACTIVIDAD<!-- <span class="despliegue">▼</span> --></a>
+							<!-- <ul>
 								<li><a href="#" title="Evento 1" target="_self">VER DETALLES<span class="despliegue">▼</span></a>
 									<ul>
-										<!-- <li><a href="#" title="Evento 1-1" target="_self">Evento 1.1</a></li> -->
-										<!-- <li><a href="#" title="Evento 1-2" target="_self">Evento 1.2</a></li> -->
+										<li><a href="#" title="Evento 1-1" target="_self">Evento 1.1</a></li>
+										<li><a href="#" title="Evento 1-2" target="_self">Evento 1.2</a></li>
 									</ul>
 								</li>
-							</ul>
+							</ul> -->
 						</li>	
 					</ul>
 				</nav>
@@ -139,7 +139,7 @@
 	<div class="content clearfix">
 		<div class="footer-1">
 			<div class="logofoot">
-				<img alt="Papus Club" src="images/logo-min.png" title="Papus Club">				
+				<img alt="Papus Club" src="images/logo-min.png" title="Papus Club" style="z-index: -1;">				
 			</div>
 			<div class="contacto">
 				<ul class="info">
@@ -152,7 +152,6 @@
 						<li><span><img class="PointImg" src="images/punto.png" width="3px" height="3px"></img></span></li>
 						<li><a href="#" title="Privacidad">PRIVACIDAD</a></li>
 						<li><span><img class="PointImg" src="images/punto.png" width="3px" height="3px"></img></span></li>
-						<li><a href="#" title="MAPA DE SITIO">MAPA DE SITIO</a></li>
 				</ul>
 					
 			</div>

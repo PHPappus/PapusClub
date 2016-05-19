@@ -24,7 +24,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-left">
-					<p class="lead"><strong>REGISTROS DE USUARIOS</strong></p>
+					<p class="lead"><strong>USUARIOS REGISTRADOS</strong></p>
 				</div>
 			</div>	
 		</div>
@@ -34,14 +34,14 @@
 						<th>Nombre</th>
 						<th>Correo</th>
 						<th>Contraseña</th>
-						<th>Tipo</th>
+						<th>Perfil</th>
 					</thead>
 					@foreach($users as $user)
 						<tbody>
 							<td>{{$user->name}}</td>
 							<td>{{$user->email}}</td>
 							<td>{{$user->password}}</td>
-							<td>{{$user->type}}</td>
+							<td>{{$user->perfil_id}}</td>
 						</tbody>
 					@endforeach
 				</table>		
