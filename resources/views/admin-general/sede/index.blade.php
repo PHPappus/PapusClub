@@ -25,6 +25,7 @@
 			
 		</div>
 	</div>
+
 	<!--barra de busqueda para mostrar sedes coincidentes con la cadena -->
 			<form method="POST" action="/sedes/search">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -39,6 +40,7 @@
 			</form>
 	</div>
 	<!--fin barra de busqueda para mostrar sedes coincidentes con la cadena -->
+
 	<div class="container">
 		<div class="form-group">
 			<div class="col-sm-16 text-center">

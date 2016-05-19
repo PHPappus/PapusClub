@@ -99,6 +99,7 @@ class SedesController extends Controller
         $sede = Sede::find($id);
         return view('admin-general.sede.detailSede', compact('sede'));
     }
+
     //Se filtra las sedes mostradas por un criterio de busqueda
     public function filterAndShow(Request $request)
     {   
@@ -119,4 +120,5 @@ class SedesController extends Controller
         return view('admin-general.sede.index', compact('sedes'));
         
     }
+
 }

@@ -81,6 +81,7 @@ Route::group(['middleware' => ['auth', 'admingeneral']], function () {
 	Route::get('postulante-al-admin','AdminGeneralController@postulante');
 	//MANTENIMIENTO DE SEDES
 	Route::get('sedes/index', 'SedesController@index');
+
 	Route::post('sedes/search', 'SedesController@filterAndShow');
 	Route::get('sedes/new', 'SedesController@create');
 	Route::post('sedes/new/sede', 'SedesController@store');
